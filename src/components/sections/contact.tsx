@@ -70,8 +70,11 @@ export default function ContactSection() {
     }
   }
   
-  const whatsappLink = "https://wa.me/15551234567"; // Use a placeholder number
-  const qrCodeUrl = `https://api.qrserver.com/v1/create-qr-code/?size=256x256&data=${encodeURIComponent(whatsappLink)}&color=D4AF37&bgcolor=191970&qzone=1`;
+  const whatsappLinkAbigail = "https://wa.me/593984356792";
+  const whatsappLinkJuanCarlos = "https://wa.me/593999864113";
+  const qrCodeUrlAbigail = `https://api.qrserver.com/v1/create-qr-code/?size=256x256&data=${encodeURIComponent(whatsappLinkAbigail)}&color=D4AF37&bgcolor=191970&qzone=1`;
+  const qrCodeUrlJuanCarlos = `https://api.qrserver.com/v1/create-qr-code/?size=256x256&data=${encodeURIComponent(whatsappLinkJuanCarlos)}&color=D4AF37&bgcolor=191970&qzone=1`;
+
 
   return (
     <section id="contact" className="py-20 sm:py-32">
@@ -134,27 +137,52 @@ export default function ContactSection() {
             </Form>
           </FadeIn>
         </div>
-        <div className="lg:col-span-2">
+        <div className="lg:col-span-2 flex flex-col gap-8">
           <FadeIn delay={200}>
             <Card className="h-full bg-card">
               <CardHeader>
                 <CardTitle className="text-2xl font-headline text-primary">Reservar por WhatsApp</CardTitle>
                 <CardDescription>
-                  Escanea el código QR con tu teléfono para iniciar una conversación con nosotros en WhatsApp y realizar reservas rápidas.
+                  Escanea el código QR para contactar a Abigail Rosero (0984 356 792).
                 </CardDescription>
               </CardHeader>
               <CardContent className="flex flex-col items-center justify-center gap-4">
                 <div className="rounded-lg border-2 border-primary bg-background p-4">
                   <Image 
-                    src={qrCodeUrl}
-                    alt="Código QR de WhatsApp"
+                    src={qrCodeUrlAbigail}
+                    alt="Código QR de WhatsApp para Abigail Rosero"
                     width={220}
                     height={220}
                   />
                 </div>
                 <Button asChild variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-                  <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
-                    Abrir WhatsApp
+                  <a href={whatsappLinkAbigail} target="_blank" rel="noopener noreferrer">
+                    Abrir WhatsApp (Abigail)
+                  </a>
+                </Button>
+              </CardContent>
+            </Card>
+          </FadeIn>
+          <FadeIn delay={300}>
+            <Card className="h-full bg-card">
+               <CardHeader>
+                <CardTitle className="text-2xl font-headline text-primary">Reservar por WhatsApp</CardTitle>
+                <CardDescription>
+                  Escanea el código QR para contactar a Juan Carlos Arellano (0999 864 113).
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="flex flex-col items-center justify-center gap-4">
+                <div className="rounded-lg border-2 border-primary bg-background p-4">
+                  <Image 
+                    src={qrCodeUrlJuanCarlos}
+                    alt="Código QR de WhatsApp para Juan Carlos Arellano"
+                    width={220}
+                    height={220}
+                  />
+                </div>
+                <Button asChild variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+                  <a href={whatsappLinkJuanCarlos} target="_blank" rel="noopener noreferrer">
+                    Abrir WhatsApp (Juan Carlos)
                   </a>
                 </Button>
               </CardContent>
