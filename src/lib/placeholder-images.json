@@ -2,33 +2,33 @@
   "placeholderImages": [
     {
       "id": "hero",
-      "description": "A grand opera stage with velvet curtains",
+      "description": "Un gran escenario de ópera con cortinas de terciopelo",
       "imageUrl": "https://picsum.photos/seed/hero/1920/1080",
-      "imageHint": "opera stage"
+      "imageHint": "escenario opera"
     },
     {
       "id": "event1",
-      "description": "A dramatic opera singer on stage",
+      "description": "Un cantante de ópera dramático en el escenario",
       "imageUrl": "https://picsum.photos/seed/event1/600/400",
-      "imageHint": "opera singer"
+      "imageHint": "cantante opera"
     },
     {
       "id": "event2",
-      "description": "An orchestra playing in the pit",
+      "description": "Una orquesta tocando en el foso",
       "imageUrl": "https://picsum.photos/seed/event2/600/400",
-      "imageHint": "orchestra pit"
+      "imageHint": "foso orquesta"
     },
     {
       "id": "event3",
-      "description": "Elegant red velvet curtains on a stage",
+      "description": "Elegantes cortinas de terciopelo rojo en un escenario",
       "imageUrl": "https://picsum.photos/seed/event3/600/400",
-      "imageHint": "velvet curtains"
+      "imageHint": "cortinas terciopelo"
     },
     {
       "id": "about",
-      "description": "The interior of a classical theater",
+      "description": "El interior de un teatro clásico",
       "imageUrl": "https://picsum.photos/seed/about/600/800",
-      "imageHint": "classical theater"
+      "imageHint": "teatro clasico"
     }
   ]
 }

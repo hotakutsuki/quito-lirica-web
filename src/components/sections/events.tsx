@@ -12,18 +12,18 @@ import { FadeIn } from '@/components/animations/fade-in';
 
 const events = [
   {
-    title: 'La Traviata by Verdi',
-    description: 'A timeless tale of love and sacrifice in the heart of Paris. A spectacular new production.',
+    title: 'La Traviata de Verdi',
+    description: 'Una historia atemporal de amor y sacrificio en el corazón de París. Una nueva producción espectacular.',
     image: PlaceHolderImages.find(p => p.id === 'event1'),
   },
   {
-    title: 'The Magic Flute by Mozart',
-    description: 'Embark on a mythical journey filled with enchanting music and fantastical characters.',
+    title: 'La Flauta Mágica de Mozart',
+    description: 'Embárcate en un viaje mítico lleno de música encantadora y personajes fantásticos.',
     image: PlaceHolderImages.find(p => p.id === 'event2'),
   },
   {
-    title: 'Carmen by Bizet',
-    description: 'Experience the fiery passion and dramatic intensity of one of the world\'s most popular operas.',
+    title: 'Carmen de Bizet',
+    description: 'Vive la pasión ardiente y la intensidad dramática de una de las óperas más populares del mundo.',
     image: PlaceHolderImages.find(p => p.id === 'event3'),
   },
 ];
@@ -34,9 +34,9 @@ export default function EventsSection() {
       <div className="container max-w-screen-2xl">
         <FadeIn>
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="font-headline text-3xl font-bold tracking-tight text-primary sm:text-4xl">Exclusive Events & Packages</h2>
+            <h2 className="font-headline text-3xl font-bold tracking-tight text-primary sm:text-4xl">Eventos y Paquetes Exclusivos</h2>
             <p className="mt-4 text-lg text-muted-foreground">
-              We offer curated experiences and premium reservation packages for the most prestigious opera houses.
+              Ofrecemos experiencias curadas y paquetes de reserva premium para los teatros de ópera más prestigiosos.
             </p>
           </div>
         </FadeIn>

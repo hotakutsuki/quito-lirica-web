@@ -20,20 +20,20 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-background/70" />
       <div className="relative z-10 max-w-4xl px-4">
         <h1 className="font-headline text-4xl font-bold tracking-tight text-primary sm:text-6xl lg:text-7xl">
-          Experience Opera Like Never Before
+          Vive la Ópera Como Nunca Antes
         </h1>
         <p className="mt-6 text-lg leading-8 text-foreground/90">
-          Gain exclusive access to the most sought-after opera events and bespoke reservation packages.
+          Obtén acceso exclusivo a los eventos de ópera más cotizados y paquetes de reserva a medida.
         </p>
         <div className="mt-10 flex items-center justify-center gap-x-6">
           <a href="#contact">
             <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
-              Request a Presentation
+              Solicitar una Presentación
             </Button>
           </a>
           <a href="#events">
             <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-              Explore Events
+              Explorar Eventos
             </Button>
           </a>
         </div>

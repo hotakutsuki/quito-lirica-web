@@ -10,10 +10,10 @@ export default function Footer() {
             <Music2 className="h-8 w-8 text-primary" />
             <span className="font-headline text-2xl font-bold text-primary">Opera Access</span>
           </Link>
-          <p className="text-muted-foreground">Your exclusive pass to the world's finest opera performances.</p>
+          <p className="text-muted-foreground">Tu pase exclusivo a las mejores presentaciones de ópera del mundo.</p>
         </div>
         <div className="flex flex-col gap-2">
-          <h3 className="font-headline text-lg font-semibold text-primary">Contact Us</h3>
+          <h3 className="font-headline text-lg font-semibold text-primary">Contáctanos</h3>
           <p className="flex items-center gap-2 text-muted-foreground">
             <Phone className="h-4 w-4 text-primary" />
             <span>+1 (555) 123-4567</span>
@@ -28,14 +28,14 @@ export default function Footer() {
           </p>
         </div>
         <div className="flex flex-col gap-2">
-          <h3 className="font-headline text-lg font-semibold text-primary">Quick Links</h3>
-          <a href="#events" className="text-muted-foreground hover:text-primary">Events</a>
-          <a href="#about" className="text-muted-foreground hover:text-primary">About Us</a>
-          <a href="#contact" className="text-muted-foreground hover:text-primary">Request a Presentation</a>
+          <h3 className="font-headline text-lg font-semibold text-primary">Enlaces Rápidos</h3>
+          <a href="#events" className="text-muted-foreground hover:text-primary">Eventos</a>
+          <a href="#about" className="text-muted-foreground hover:text-primary">Sobre Nosotros</a>
+          <a href="#contact" className="text-muted-foreground hover:text-primary">Solicitar una Presentación</a>
         </div>
       </div>
       <div className="container mt-8 max-w-screen-2xl border-t border-border/40 pt-8 text-center text-sm text-muted-foreground">
-        <p>&copy; {new Date().getFullYear()} Opera Access. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Opera Access. Todos los derechos reservados.</p>
       </div>
     </footer>
   );

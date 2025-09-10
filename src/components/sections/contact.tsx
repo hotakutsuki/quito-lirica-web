@@ -21,21 +21,21 @@ import { FadeIn } from "@/components/animations/fade-in"
 
 const formSchema = z.object({
   name: z.string().min(2, {
-    message: "Name must be at least 2 characters.",
+    message: "El nombre debe tener al menos 2 caracteres.",
   }),
   email: z.string().email({
-    message: "Please enter a valid email address.",
+    message: "Por favor, introduce una dirección de correo electrónico válida.",
   }),
   message: z.string().min(10, {
-    message: "Message must be at least 10 characters.",
+    message: "El mensaje debe tener al menos 10 caracteres.",
   }).max(500, {
-    message: "Message must not be longer than 500 characters.",
+    message: "El mensaje no debe tener más de 500 caracteres.",
   }),
 })
 
 // A mock server action
 async function submitPresentationRequest(data: z.infer<typeof formSchema>) {
-  console.log("Form submitted:", data);
+  console.log("Formulario enviado:", data);
   // In a real app, you would send this to your backend
   await new Promise(resolve => setTimeout(resolve, 1000));
   return { success: true };
@@ -49,7 +49,7 @@ export default function ContactSection() {
     defaultValues: {
       name: "",
       email: "",
-      message: "I'd like to request a private presentation about your opera reservation packages.",
+      message: "Me gustaría solicitar una presentación privada sobre sus paquetes de reserva de ópera.",
     },
   });
 
@@ -57,15 +57,15 @@ export default function ContactSection() {
     const result = await submitPresentationRequest(values);
     if (result.success) {
       toast({
-        title: "Request Sent!",
-        description: "Thank you for your interest. We will be in touch shortly.",
+        title: "¡Solicitud Enviada!",
+        description: "Gracias por tu interés. Nos pondremos en contacto en breve.",
       });
       form.reset();
     } else {
       toast({
         variant: "destructive",
-        title: "Something went wrong",
-        description: "Could not send your request. Please try again.",
+        title: "Algo salió mal",
+        description: "No se pudo enviar tu solicitud. Por favor, inténtalo de nuevo.",
       });
     }
   }
@@ -78,9 +78,9 @@ export default function ContactSection() {
       <div className="container max-w-screen-2xl grid grid-cols-1 lg:grid-cols-5 gap-12">
         <div className="lg:col-span-3">
           <FadeIn>
-            <h2 className="font-headline text-3xl font-bold tracking-tight text-primary sm:text-4xl">Request a Private Presentation</h2>
+            <h2 className="font-headline text-3xl font-bold tracking-tight text-primary sm:text-4xl">Solicitar una Presentación Privada</h2>
             <p className="mt-4 text-lg text-muted-foreground">
-              Fill out the form below to schedule a private presentation and discover our exclusive packages.
+              Completa el formulario a continuación para programar una presentación privada y descubrir nuestros paquetes exclusivos.
             </p>
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="mt-10 space-y-6">
@@ -89,9 +89,9 @@ export default function ContactSection() {
                   name="name"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Full Name</FormLabel>
+                      <FormLabel>Nombre Completo</FormLabel>
                       <FormControl>
-                        <Input placeholder="John Doe" {...field} />
+                        <Input placeholder="Juan Pérez" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -102,9 +102,9 @@ export default function ContactSection() {
                   name="email"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Email Address</FormLabel>
+                      <FormLabel>Dirección de Correo Electrónico</FormLabel>
                       <FormControl>
-                        <Input placeholder="john.doe@example.com" {...field} />
+                        <Input placeholder="juan.perez@ejemplo.com" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -115,10 +115,10 @@ export default function ContactSection() {
                   name="message"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Message</FormLabel>
+                      <FormLabel>Mensaje</FormLabel>
                       <FormControl>
                         <Textarea
-                          placeholder="Tell us about your interests..."
+                          placeholder="Cuéntanos sobre tus intereses..."
                           className="min-h-[120px]"
                           {...field}
                         />
@@ -128,7 +128,7 @@ export default function ContactSection() {
                   )}
                 />
                 <Button type="submit" size="lg" className="w-full bg-accent hover:bg-accent/90 text-accent-foreground md:w-auto" disabled={form.formState.isSubmitting}>
-                  {form.formState.isSubmitting ? "Sending..." : "Send Request"}
+                  {form.formState.isSubmitting ? "Enviando..." : "Enviar Solicitud"}
                 </Button>
               </form>
             </Form>
@@ -138,23 +138,23 @@ export default function ContactSection() {
           <FadeIn delay={200}>
             <Card className="h-full bg-card">
               <CardHeader>
-                <CardTitle className="text-2xl font-headline text-primary">Reserve via WhatsApp</CardTitle>
+                <CardTitle className="text-2xl font-headline text-primary">Reservar por WhatsApp</CardTitle>
                 <CardDescription>
-                  Scan the QR code with your phone to start a conversation with us on WhatsApp for quick reservations.
+                  Escanea el código QR con tu teléfono para iniciar una conversación con nosotros en WhatsApp y realizar reservas rápidas.
                 </CardDescription>
               </CardHeader>
               <CardContent className="flex flex-col items-center justify-center gap-4">
                 <div className="rounded-lg border-2 border-primary bg-background p-4">
                   <Image 
                     src={qrCodeUrl}
-                    alt="WhatsApp QR Code"
+                    alt="Código QR de WhatsApp"
                     width={220}
                     height={220}
                   />
                 </div>
                 <Button asChild variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
                   <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
-                    Open WhatsApp
+                    Abrir WhatsApp
                   </a>
                 </Button>
               </CardContent>
