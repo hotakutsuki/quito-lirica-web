@@ -16,7 +16,7 @@ export default function Footer() {
                 alt={logoImage.alt}
                 width={32}
                 height={32}
-                className="h-8 w-8"
+                className="h-8 w-auto"
               />
             )}
             <span className="font-headline text-2xl font-bold text-primary">Quito Lírica Ópera show</span>
