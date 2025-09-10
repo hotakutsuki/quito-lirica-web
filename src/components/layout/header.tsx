@@ -17,7 +17,7 @@ export default function Header() {
       <div className="container flex h-14 max-w-screen-2xl items-center justify-between px-4">
         <Link href="/" className="flex items-center gap-2">
           <Music2 className="h-6 w-6 text-primary" />
-          <span className="font-headline text-xl font-bold text-primary">Opera Access</span>
+          <span className="font-headline text-xl font-bold text-primary">Quito Lírica Ópera show</span>
         </Link>
         <nav className="hidden items-center gap-4 text-sm md:flex">
           <Button variant="link" onClick={() => scrollTo('events')} className="text-foreground/80 hover:text-primary">Eventos</Button>
