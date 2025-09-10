@@ -1,0 +1,33 @@
+'use client';
+
+import Link from 'next/link';
+import { Music2 } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+
+export default function Header() {
+  const scrollTo = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  return (
+    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <div className="container flex h-14 max-w-screen-2xl items-center justify-between">
+        <Link href="/" className="flex items-center gap-2">
+          <Music2 className="h-6 w-6 text-primary" />
+          <span className="font-headline text-xl font-bold text-primary">Opera Access</span>
+        </Link>
+        <nav className="hidden items-center gap-4 text-sm md:flex">
+          <Button variant="link" onClick={() => scrollTo('events')} className="text-foreground/80 hover:text-primary">Events</Button>
+          <Button variant="link" onClick={() => scrollTo('about')} className="text-foreground/80 hover:text-primary">About Us</Button>
+          <Button variant="link" onClick={() => scrollTo('contact')} className="text-foreground/80 hover:text-primary">Contact</Button>
+        </nav>
+        <Button onClick={() => scrollTo('contact')} className="hidden bg-accent hover:bg-accent/90 text-accent-foreground md:inline-flex">
+          Request Presentation
+        </Button>
+      </div>
+    </header>
+  );
+}

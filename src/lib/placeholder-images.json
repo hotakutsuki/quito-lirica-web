@@ -1,3 +1,34 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero",
+      "description": "A grand opera stage with velvet curtains",
+      "imageUrl": "https://picsum.photos/seed/hero/1920/1080",
+      "imageHint": "opera stage"
+    },
+    {
+      "id": "event1",
+      "description": "A dramatic opera singer on stage",
+      "imageUrl": "https://picsum.photos/seed/event1/600/400",
+      "imageHint": "opera singer"
+    },
+    {
+      "id": "event2",
+      "description": "An orchestra playing in the pit",
+      "imageUrl": "https://picsum.photos/seed/event2/600/400",
+      "imageHint": "orchestra pit"
+    },
+    {
+      "id": "event3",
+      "description": "Elegant red velvet curtains on a stage",
+      "imageUrl": "https://picsum.photos/seed/event3/600/400",
+      "imageHint": "velvet curtains"
+    },
+    {
+      "id": "about",
+      "description": "The interior of a classical theater",
+      "imageUrl": "https://picsum.photos/seed/about/600/800",
+      "imageHint": "classical theater"
+    }
+  ]
 }
