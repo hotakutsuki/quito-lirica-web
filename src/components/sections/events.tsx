@@ -26,6 +26,21 @@ const events = [
     description: 'Vive la pasión ardiente y la intensidad dramática de una de las óperas más populares del mundo.',
     image: images.event3,
   },
+  {
+    title: 'Don Giovanni de Mozart',
+    description: 'La oscura y carismática historia de un libertino que desafía todas las normas sociales y divinas.',
+    image: images.event4,
+  },
+  {
+    title: 'Las bodas de Fígaro',
+    description: 'Una comedia de intrigas, amor y enredos en un solo día de locura en el palacio del Conde de Almaviva.',
+    image: images.event5,
+  },
+  {
+    title: 'Tosca de Puccini',
+    description: 'Un thriller operístico de amor, celos y política en la Roma de 1800.',
+    image: images.event6,
+  },
 ];
 
 export default function EventsSection() {

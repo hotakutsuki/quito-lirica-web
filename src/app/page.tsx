@@ -10,8 +10,8 @@ import Image from 'next/image';
 import { images } from '@/lib/images';
 
 export default function Home() {
-  const bannerImage = images.about; // Re-using about image for the banner as requested
-
+  const bannerImage = images.banner; // Re-using about image for the banner as requested
+  
   return (
     <div className="flex min-h-screen flex-col bg-background">
       <Header />
