@@ -5,6 +5,7 @@ import EventsSection from '@/components/sections/events';
 import AboutSection from '@/components/sections/about';
 import ContactSection from '@/components/sections/contact';
 import VideosSection from '@/components/sections/videos';
+import NewsletterSection from '@/components/sections/newsletter';
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
         <EventsSection />
         <VideosSection />
         <AboutSection />
+        <NewsletterSection />
         <ContactSection />
       </main>
       <Footer />
