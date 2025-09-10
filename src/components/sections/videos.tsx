@@ -15,10 +15,6 @@ const videos = [
     videoId: '5DV9SlRKKnQ',
   },
   {
-    title: 'Opera en Supermaxi',
-    videoId: 'txasuOlyW6M',
-  },
-  {
     title: 'FLASHMOB. O sole mio',
     videoId: 'xEmEeW63ppg',
   },
