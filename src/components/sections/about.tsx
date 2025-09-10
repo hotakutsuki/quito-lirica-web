@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/collapsible"
 import { Button } from '@/components/ui/button';
 import { useState } from 'react';
+import * as React from 'react';
 
 export default function AboutSection() {
   const aboutImage = images.about;
@@ -29,11 +30,16 @@ export default function AboutSection() {
               </div>
               <Collapsible open={isOpen} onOpenChange={setIsOpen}>
                 <p className="mt-8 text-lg text-foreground/80 whitespace-pre-line">
-                  Fundada en 2008 como 'Quito Lírica Ópera Show' por Juan Carlos Arellano y Abigail Rosero, nuestra agrupación tiene una rica historia haciendo la ópera accesible y disfrutable, a menudo mezclándola con un toque de humor. Nuestra misión es desmitificar la ópera y llevar su pasión y belleza a una audiencia más amplia a través de experiencias exclusivas y curadas.
+                  Fundada en 2008 por el tenor Juan Carlos Arellano y la soprano Abigail Rosero, Quito Lírica Ópera Show nació con el afán de popularizar la lírica en Ecuador dentro de un ambiente cómico y distendido. Nuestra misión es desmitificar la ópera y llevar su pasión y belleza a una audiencia más amplia a través de experiencias exclusivas y curadas.
                 </p>
                 <CollapsibleContent>
                   <p className="mt-4 text-lg text-foreground/80 whitespace-pre-line">
-                    A lo largo de los años, hemos tenido el honor de presentar un repertorio diverso, desde las grandes óperas de Verdi y Puccini hasta las ingeniosas comedias de Mozart y Rossini. Cada producción es una oportunidad para conectar con el público, no solo a través de la música, sino también de la emoción y la narrativa. Creemos que la ópera es una forma de arte viva y vibrante que tiene el poder de conmover y transformar. Por eso, nos esforzamos por crear espectáculos que sean tanto de alta calidad artística como entretenidos y cercanos.
+                    Nuestra propuesta artística une la lírica con el humor al estilo del "Carnaval de Venecia", convirtiéndonos en pioneros al llevar el repertorio operístico fuera de los teatros. Con el tiempo, el proyecto evolucionó para consolidarse como una compañía lírica independiente, integrando a más músicos, bailarines y directores escénicos.
+                    Realizamos montajes de escenas de óperas, zarzuelas y conciertos, sin perder nuestra esencia de llevar la lírica a todas partes. Actualmente, fusionamos la lírica con repertorio popular para llegar a un público variado, siempre con interpretaciones de la más alta calidad profesional.
+                    Nuestros innovadores formatos incluyen:
+                    - Show de Ópera al estilo Carnaval Veneciano: Una experiencia inmersiva donde los artistas, con vestuario de época, cantan alrededor del público.
+                    - Flashmob y Ópera Secreta: Artistas disfrazados de personal sorprenden a la audiencia, creando un enorme impacto, ideal para reforzar marcas o productos.
+                    - Concierto: Un formato más tradicional y formal, perfecto para seminarios, congresos o ceremonias solemnes.
                   </p>
                 </CollapsibleContent>
                 <CollapsibleTrigger asChild>
