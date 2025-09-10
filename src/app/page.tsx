@@ -4,6 +4,7 @@ import HeroSection from '@/components/sections/hero';
 import EventsSection from '@/components/sections/events';
 import AboutSection from '@/components/sections/about';
 import ContactSection from '@/components/sections/contact';
+import VideosSection from '@/components/sections/videos';
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <main className="flex-1">
         <HeroSection />
         <EventsSection />
+        <VideosSection />
         <AboutSection />
         <ContactSection />
       </main>
