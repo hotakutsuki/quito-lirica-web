@@ -18,6 +18,7 @@ import { useToast } from "@/hooks/use-toast"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import Image from "next/image"
 import { FadeIn } from "@/components/animations/fade-in"
+import { sendContactEmail } from "@/ai/flows/contact-flow";
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -33,14 +34,6 @@ const formSchema = z.object({
   }),
 })
 
-// A mock server action
-async function submitPresentationRequest(data: z.infer<typeof formSchema>) {
-  console.log("Formulario enviado:", data);
-  // In a real app, you would send this to your backend
-  await new Promise(resolve => setTimeout(resolve, 1000));
-  return { success: true };
-}
-
 export default function ContactSection() {
   const { toast } = useToast();
 
@@ -54,14 +47,14 @@ export default function ContactSection() {
   });
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
-    const result = await submitPresentationRequest(values);
-    if (result.success) {
+    try {
+      await sendContactEmail(values);
       toast({
         title: "¡Solicitud Enviada!",
         description: "Gracias por tu interés. Nos pondremos en contacto en breve.",
       });
       form.reset();
-    } else {
+    } catch (error) {
       toast({
         variant: "destructive",
         title: "Algo salió mal",
