@@ -2,33 +2,33 @@
   "placeholderImages": [
     {
       "id": "hero",
-      "description": "Un gran escenario de ópera con cortinas de terciopelo",
-      "imageUrl": "https://picsum.photos/seed/hero/1920/1080",
-      "imageHint": "escenario opera"
+      "description": "Un hombre y una mujer con máscaras de ópera y trajes de época",
+      "imageUrl": "https://i.imgur.com/gcsZ36u.jpeg",
+      "imageHint": "pareja opera"
     },
     {
       "id": "event1",
-      "description": "Un cantante de ópera dramático en el escenario",
-      "imageUrl": "https://picsum.photos/seed/event1/600/400",
-      "imageHint": "cantante opera"
+      "description": "Un hombre y una mujer con máscaras de ópera y trajes de época",
+      "imageUrl": "https://i.imgur.com/gcsZ36u.jpeg",
+      "imageHint": "pareja opera"
     },
     {
       "id": "event2",
-      "description": "Una orquesta tocando en el foso",
-      "imageUrl": "https://picsum.photos/seed/event2/600/400",
-      "imageHint": "foso orquesta"
+      "description": "Un hombre y una mujer con máscaras de ópera y trajes de época",
+      "imageUrl": "https://i.imgur.com/gcsZ36u.jpeg",
+      "imageHint": "pareja opera"
     },
     {
       "id": "event3",
-      "description": "Elegantes cortinas de terciopelo rojo en un escenario",
-      "imageUrl": "https://picsum.photos/seed/event3/600/400",
-      "imageHint": "cortinas terciopelo"
+      "description": "Un hombre y una mujer con máscaras de ópera y trajes de época",
+      "imageUrl": "https://i.imgur.com/gcsZ36u.jpeg",
+      "imageHint": "pareja opera"
     },
     {
       "id": "about",
-      "description": "El interior de un teatro clásico",
-      "imageUrl": "https://picsum.photos/seed/about/600/800",
-      "imageHint": "teatro clasico"
+      "description": "Un hombre y una mujer con máscaras de ópera y trajes de época",
+      "imageUrl": "https://i.imgur.com/gcsZ36u.jpeg",
+      "imageHint": "pareja opera"
     }
   ]
 }
