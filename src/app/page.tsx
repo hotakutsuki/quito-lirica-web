@@ -6,12 +6,28 @@ import AboutSection from '@/components/sections/about';
 import ContactSection from '@/components/sections/contact';
 import VideosSection from '@/components/sections/videos';
 import NewsletterSection from '@/components/sections/newsletter';
+import Image from 'next/image';
+import { images } from '@/lib/images';
 
 export default function Home() {
+  const bannerImage = images.about; // Re-using about image for the banner as requested
+
   return (
     <div className="flex min-h-screen flex-col bg-background">
       <Header />
       <main className="flex-1">
+        {bannerImage && (
+          <div className="relative h-48 w-full">
+            <Image
+              src={bannerImage.src}
+              alt={bannerImage.alt}
+              fill
+              className="object-cover"
+              priority
+              data-ai-hint={bannerImage.hint}
+            />
+          </div>
+        )}
         <HeroSection />
         <EventsSection />
         <VideosSection />
