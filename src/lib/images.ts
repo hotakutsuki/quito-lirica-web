@@ -7,13 +7,8 @@ import event4Image from '@/assets/event4.jpeg';
 import event5Image from '@/assets/event5.jpeg';
 import event6Image from '@/assets/event6.jpeg';
 import backgroundImage from '@/assets/background.jpeg';
-import operalogo from '@/assets/operalogo.png';
 
 export const images = {
-  logo: {
-    src: operalogo,
-    alt: 'Quito Lírica Ópera show Logo',
-  },
   hero: {
     src: backgroundImage,
     alt: 'Una pareja en un escenario de ópera',
