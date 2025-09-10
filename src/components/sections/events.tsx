@@ -31,7 +31,7 @@ const events = [
 export default function EventsSection() {
   return (
     <section id="events" className="py-20 sm:py-32">
-      <div className="container max-w-screen-2xl">
+      <div className="container max-w-screen-2xl px-4">
         <FadeIn>
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="font-headline text-3xl font-bold tracking-tight text-primary sm:text-4xl">Eventos y Paquetes Exclusivos</h2>

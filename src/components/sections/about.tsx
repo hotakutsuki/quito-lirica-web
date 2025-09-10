@@ -9,7 +9,7 @@ export default function AboutSection() {
 
   return (
     <section id="about" className="bg-card py-20 sm:py-32">
-      <div className="container max-w-screen-2xl">
+      <div className="container max-w-screen-2xl px-4">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
           <FadeIn>
             <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">

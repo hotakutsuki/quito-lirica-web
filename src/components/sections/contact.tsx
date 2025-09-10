@@ -71,7 +71,7 @@ export default function ContactSection() {
 
   return (
     <section id="contact" className="py-20 sm:py-32">
-      <div className="container max-w-screen-2xl grid grid-cols-1 lg:grid-cols-2 gap-12">
+      <div className="container max-w-screen-2xl grid grid-cols-1 lg:grid-cols-2 gap-12 px-4">
         <div className="lg:col-span-1">
           <FadeIn>
             <h2 className="font-headline text-3xl font-bold tracking-tight text-primary sm:text-4xl">Solicitar una Presentación Privada</h2>
