@@ -1,11 +1,10 @@
-
-import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { images } from '@/lib/images';
 import { Feather } from 'lucide-react';
 import Image from 'next/image';
 import { FadeIn } from '@/components/animations/fade-in';
 
 export default function AboutSection() {
-  const aboutImage = PlaceHolderImages.find(p => p.id === 'about');
+  const aboutImage = images.about;
 
   return (
     <section id="about" className="bg-card py-20 sm:py-32">
@@ -27,11 +26,11 @@ export default function AboutSection() {
             {aboutImage && (
               <div className="relative mx-auto h-[500px] w-full max-w-md lg:max-w-none">
                 <Image
-                  src={aboutImage.imageUrl}
-                  alt="Sobre Nosotros"
+                  src={aboutImage.src}
+                  alt={aboutImage.alt}
                   fill
                   className="rounded-lg object-cover shadow-lg"
-                  data-ai-hint={aboutImage.imageHint}
+                  data-ai-hint={aboutImage.hint}
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>

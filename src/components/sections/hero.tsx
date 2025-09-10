@@ -1,20 +1,20 @@
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { images } from '@/lib/images';
 
 export default function HeroSection() {
-  const heroImage = PlaceHolderImages.find(p => p.id === 'hero');
+  const heroImage = images.hero;
 
   return (
     <section className="relative flex h-[60vh] w-full items-center justify-center text-center text-white md:h-[80vh]">
       {heroImage && (
         <Image
-          src={heroImage.imageUrl}
-          alt={heroImage.description}
+          src={heroImage.src}
+          alt={heroImage.alt}
           fill
           className="object-cover"
           priority
-          data-ai-hint={heroImage.imageHint}
+          data-ai-hint={heroImage.hint}
         />
       )}
       <div className="absolute inset-0 bg-background/70" />

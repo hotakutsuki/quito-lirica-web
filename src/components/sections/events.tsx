@@ -6,7 +6,7 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { images } from '@/lib/images';
 import { Ticket } from 'lucide-react';
 import { FadeIn } from '@/components/animations/fade-in';
 
@@ -14,17 +14,17 @@ const events = [
   {
     title: 'La Traviata de Verdi',
     description: 'Una historia atemporal de amor y sacrificio en el corazón de París. Una nueva producción espectacular.',
-    image: PlaceHolderImages.find(p => p.id === 'event1'),
+    image: images.event1,
   },
   {
     title: 'La Flauta Mágica de Mozart',
     description: 'Embárcate en un viaje mítico lleno de música encantadora y personajes fantásticos.',
-    image: PlaceHolderImages.find(p => p.id === 'event2'),
+    image: images.event2,
   },
   {
     title: 'Carmen de Bizet',
     description: 'Vive la pasión ardiente y la intensidad dramática de una de las óperas más populares del mundo.',
-    image: PlaceHolderImages.find(p => p.id === 'event3'),
+    image: images.event3,
   },
 ];
 
@@ -47,11 +47,11 @@ export default function EventsSection() {
                 {event.image && (
                   <div className="relative h-60 w-full">
                     <Image
-                      src={event.image.imageUrl}
+                      src={event.image.src}
                       alt={event.title}
                       fill
                       className="object-cover"
-                      data-ai-hint={event.image.imageHint}
+                      data-ai-hint={event.image.hint}
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
                   </div>
