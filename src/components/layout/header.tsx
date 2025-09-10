@@ -1,8 +1,9 @@
 'use client';
 
 import Link from 'next/link';
-import { Music2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import Image from 'next/image';
+import { images } from '@/lib/images';
 
 export default function Header() {
   const scrollTo = (id: string) => {
@@ -11,12 +12,22 @@ export default function Header() {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   };
+  
+  const logoImage = images.logo;
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-14 max-w-screen-2xl items-center justify-between px-4">
         <Link href="/" className="flex items-center gap-2">
-          <Music2 className="h-6 w-6 text-primary" />
+          {logoImage && (
+            <Image 
+              src={logoImage.src}
+              alt={logoImage.alt}
+              width={32}
+              height={32}
+              className="h-8 w-8"
+            />
+          )}
           <span className="font-headline text-xl font-bold text-primary">Quito Lírica Ópera show</span>
         </Link>
         <nav className="hidden items-center gap-4 text-sm md:flex">

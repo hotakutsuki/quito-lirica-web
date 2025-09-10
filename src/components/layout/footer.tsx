@@ -1,13 +1,24 @@
-import { Facebook, Instagram, Mail, Mic, Music2, Phone, Youtube } from 'lucide-react';
+import { Facebook, Instagram, Mail, Mic, Phone, Youtube } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
+import { images } from '@/lib/images';
 
 export default function Footer() {
+  const logoImage = images.logo;
   return (
     <footer className="border-t border-border/40 bg-background/95 py-12">
       <div className="container grid max-w-screen-2xl grid-cols-1 gap-8 px-4 md:grid-cols-3">
         <div className="flex flex-col items-start gap-4 md:col-span-1">
           <Link href="/" className="flex items-center gap-2">
-            <Music2 className="h-8 w-8 text-primary" />
+            {logoImage && (
+              <Image 
+                src={logoImage.src}
+                alt={logoImage.alt}
+                width={32}
+                height={32}
+                className="h-8 w-8"
+              />
+            )}
             <span className="font-headline text-2xl font-bold text-primary">Quito Lírica Ópera show</span>
           </Link>
           <p className="text-muted-foreground">Tu pase exclusivo a las mejores presentaciones de ópera del mundo.</p>
