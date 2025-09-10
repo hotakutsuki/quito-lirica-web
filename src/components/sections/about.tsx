@@ -29,7 +29,7 @@ export default function AboutSection() {
                   src={aboutImage.src}
                   alt={aboutImage.alt}
                   fill
-                  className="rounded-lg object-cover shadow-lg"
+                  className="rounded-lg object-contain shadow-lg"
                   data-ai-hint={aboutImage.hint}
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />

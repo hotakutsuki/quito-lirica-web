@@ -27,8 +27,13 @@ export const images = {
     hint: 'pareja opera',
   },
   about: {
-    src: bannerOperaImage,
+    src: principalImage,
     alt: 'Los fundadores de Opera Access',
     hint: 'pareja opera',
   },
+  banner: {
+    src: bannerOperaImage,
+    alt: 'Banner de Opera Access',
+    hint: 'opera banner',
+  }
 };
