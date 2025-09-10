@@ -2,7 +2,7 @@ import heroImage from '@/assets/hero.jpeg';
 import event1Image from '@/assets/event1.jpeg';
 import event2Image from '@/assets/event2.jpeg';
 import event3Image from '@/assets/event3.jpeg';
-import aboutImage from '@/assets/about.jpeg';
+import aboutImage from '@/assets/about.jpg';
 
 export const images = {
   hero: {

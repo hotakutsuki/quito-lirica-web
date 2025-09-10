@@ -4,7 +4,7 @@ import Link from 'next/link';
 export default function Footer() {
   return (
     <footer className="border-t border-border/40 bg-background/95 py-12">
-      <div className="container grid max-w-screen-2xl grid-cols-1 gap-8 md:grid-cols-4">
+      <div className="container grid max-w-screen-2xl grid-cols-1 gap-8 md:grid-cols-3">
         <div className="flex flex-col items-start gap-4 md:col-span-1">
           <Link href="/" className="flex items-center gap-2">
             <Music2 className="h-8 w-8 text-primary" />
@@ -45,12 +45,6 @@ export default function Footer() {
             <Youtube className="h-4 w-4 text-primary" />
             <span>Juan Carlos Arellano en YouTube</span>
           </a>
-        </div>
-        <div className="flex flex-col gap-2">
-          <h3 className="font-headline text-lg font-semibold text-primary">Enlaces Rápidos</h3>
-          <a href="#events" className="text-muted-foreground hover:text-primary">Eventos</a>
-          <a href="#about" className="text-muted-foreground hover:text-primary">Sobre Nosotros</a>
-          <a href="#contact" className="text-muted-foreground hover:text-primary">Solicitar una Presentación</a>
         </div>
       </div>
       <div className="container mt-8 max-w-screen-2xl border-t border-border/40 pt-8 text-center text-sm text-muted-foreground">
