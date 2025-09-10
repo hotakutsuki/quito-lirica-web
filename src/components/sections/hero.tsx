@@ -25,7 +25,7 @@ export default function HeroSection() {
         <p className="mt-6 text-lg leading-8 text-foreground/90">
           Obtén acceso exclusivo a los eventos de ópera más cotizados y paquetes de reserva a medida.
         </p>
-        <div className="mt-10 flex items-center justify-center gap-x-6">
+        <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-x-6">
           <a href="#contact">
             <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
               Solicitar una Presentación
