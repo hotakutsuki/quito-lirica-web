@@ -41,6 +41,11 @@ const events = [
     description: 'Un thriller operístico de amor, celos y política en la Roma de 1800.',
     image: images.event6,
   },
+  {
+    title: 'Rigoletto de Verdi',
+    description: 'Un drama de pasión, engaño, amor filial y venganza que tiene como protagonista a un bufón jorobado.',
+    image: images.event7,
+  },
 ];
 
 export default function EventsSection() {

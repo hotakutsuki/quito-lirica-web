@@ -7,6 +7,7 @@ import event3Image from '@/assets/event3.jpeg';
 import event4Image from '@/assets/event4.jpeg';
 import event5Image from '@/assets/event5.jpeg';
 import event6Image from '@/assets/event6.jpeg';
+import event7Image from '@/assets/event7.jpeg';
 
 export const images = {
   hero: {
@@ -43,6 +44,11 @@ export const images = {
     src: event6Image,
     alt: 'Escena de Tosca de Puccini',
     hint: 'mujer opera',
+  },
+  event7: {
+    src: event7Image,
+    alt: 'Escena de Rigoletto de Verdi',
+    hint: 'hombre opera',
   },
   about: {
     src: principalImage,

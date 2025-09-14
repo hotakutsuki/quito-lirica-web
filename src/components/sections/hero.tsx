@@ -23,7 +23,7 @@ export default function HeroSection() {
           <Button size="lg" className="bg-gold-gradient hover:opacity-90 text-primary-foreground" onClick={() => scrollTo('contact')}>
             Solicitar una Presentación
           </Button>
-          <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground" onClick={() => scrollTo('events')}>
+          <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-gold-gradient hover:text-primary-foreground" onClick={() => scrollTo('events')}>
             Explorar Eventos
           </Button>
         </div>
