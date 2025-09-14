@@ -18,7 +18,7 @@ export default function AboutSection() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <section id="about" className="bg-card py-20 sm:py-32">
+    <section id="about" className="bg-transparent py-20 sm:py-32">
       <div className="container max-w-screen-2xl px-4">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
           <FadeIn>
@@ -30,16 +30,16 @@ export default function AboutSection() {
               </div>
               <Collapsible open={isOpen} onOpenChange={setIsOpen}>
                 <p className="mt-8 text-lg text-foreground/80 whitespace-pre-line">
-                  Fundada en 2008 por el tenor Juan Carlos Arellano y la soprano Abigail Rosero, Quito Lírica Ópera Show nació con el afán de popularizar la lírica en Ecuador dentro de un ambiente cómico y distendido. Nuestra misión es desmitificar la ópera y llevar su pasión y belleza a una audiencia más amplia a través de experiencias exclusivas y curadas.
+                  QUITO LÍRICA Ópera Show fue creada con el afán de popularizar la lírica en el territorio ecuatoriano en un ambiente cómico y distendido. Fundada por el tenor Juan Carlos Arellano y la soprano Abigail Rosero en el año 2008, en un inicio funcionó como una empresa de entretenimiento musical. Su propuesta artística une la lírica con el humor al estilo “Carnaval de Venecia” y procura llevar en cada presentación un repertorio variado, soberbio y atractivo; convirtiéndose en pionera al llevar el repertorio operístico fuera de los teatros.
                 </p>
                 <CollapsibleContent>
                   <p className="mt-4 text-lg text-foreground/80 whitespace-pre-line">
-                    Nuestra propuesta artística une la lírica con el humor al estilo del "Carnaval de Venecia", convirtiéndonos en pioneros al llevar el repertorio operístico fuera de los teatros. Con el tiempo, el proyecto evolucionó para consolidarse como una compañía lírica independiente, integrando a más músicos, bailarines y directores escénicos.
-                    Realizamos montajes de escenas de óperas, zarzuelas y conciertos, sin perder nuestra esencia de llevar la lírica a todas partes. Actualmente, fusionamos la lírica con repertorio popular para llegar a un público variado, siempre con interpretaciones de la más alta calidad profesional.
-                    Nuestros innovadores formatos incluyen:
-                    - Show de Ópera al estilo Carnaval Veneciano: Una experiencia inmersiva donde los artistas, con vestuario de época, cantan alrededor del público.
-                    - Flashmob y Ópera Secreta: Artistas disfrazados de personal sorprenden a la audiencia, creando un enorme impacto, ideal para reforzar marcas o productos.
-                    - Concierto: Un formato más tradicional y formal, perfecto para seminarios, congresos o ceremonias solemnes.
+                    Posteriormente, el proyecto evoluciona y se integran varios músicos, bailarines y directores escénicos, consolidándose como compañía lírica independiente. Realiza montajes de escenas de óperas y zarzuelas y organiza sendos conciertos en diferentes teatros y salas de conciertos del Ecuador, sin dejar de lado su esencia de llevar la lírica a todas partes que fuera su razón de ser. Su labor de divulgación de la lírica ha permitido que el público se nutra de nuevo repertorio y que escuche interpretaciones de altísima calidad y profesionalismo. Actualmente configuran la lírica con repertorio popular y llegan a un público muy variado. Las propuestas, innovadoras y diferente procuran cumplir el derecho al acceso a expresiones culturales diversas.
+                    
+                    Formatos de Espectáculo:
+                    - Show de Ópera al estilo Carnaval Veneciano: Los cantantes utilizan vestuario de época, antifaces o trajes de gala. El show consiste de una pequeña introducción de cada canción, la cual es ejecutada alrededor de las mesas donde se encuentran los asistentes. De este modo, la audiencia aprecia a los artistas a poca distancia y se vuelven parte del show.
+                    - Flashmob y Ópera Secreta: Los cantantes visten uniformes de meseros, chef, hostess, etc., y ejecutan las canciones artista tras artista para sorprender a la audiencia que no sabían sobre el show. Este formato tiene un enorme impacto, especialmente cuando se trata de reforzar una marca, o un producto.
+                    - Concierto: El vestuario es formal y la interpretación es realizada en un escenario de manera estática. Este formato es ideal para seminarios, congresos o ceremonias donde se espera que la audiencia escuche en silencio.
                   </p>
                 </CollapsibleContent>
                 <CollapsibleTrigger asChild>

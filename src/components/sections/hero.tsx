@@ -1,22 +1,8 @@
-import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { images } from '@/lib/images';
 
 export default function HeroSection() {
-  const heroImage = images.hero;
-
   return (
-    <section className="relative flex h-[60vh] w-full items-center justify-center text-center text-white md:h-[80vh]">
-      {heroImage && (
-        <Image
-          src={heroImage.src}
-          alt={heroImage.alt}
-          fill
-          className="object-cover"
-          priority
-          data-ai-hint={heroImage.hint}
-        />
-      )}
+    <section className="relative flex h-[calc(60vh-12rem)] w-full items-center justify-center text-center text-white md:h-[calc(80vh-12rem)]">
       <div className="absolute inset-0 bg-background/70" />
       <div className="relative z-10 max-w-4xl px-4">
         <h1 className="font-headline text-4xl font-bold tracking-tight text-primary sm:text-6xl lg:text-7xl">

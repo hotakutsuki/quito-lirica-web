@@ -45,7 +45,7 @@ const events = [
 
 export default function EventsSection() {
   return (
-    <section id="events" className="py-20 sm:py-32">
+    <section id="events" className="bg-transparent py-20 sm:py-32">
       <div className="container max-w-screen-2xl px-4">
         <FadeIn>
           <div className="mx-auto max-w-2xl text-center">

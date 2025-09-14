@@ -58,7 +58,7 @@ export default function NewsletterSection() {
   }
 
   return (
-    <section id="newsletter" className="bg-card py-20 sm:py-32">
+    <section id="newsletter" className="bg-transparent py-20 sm:py-32">
       <div className="container max-w-screen-2xl px-4">
         <FadeIn>
           <div className="mx-auto max-w-2xl text-center">
