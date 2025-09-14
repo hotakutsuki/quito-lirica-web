@@ -1,5 +1,6 @@
 import principalImage from '@/assets/principal.jpeg';
 import bannerOperaImage from '@/assets/banner_opera.jpeg';
+import background from '@/assets/background.jpeg'
 import event1Image from '@/assets/event1.jpeg';
 import event2Image from '@/assets/event2.jpeg';
 import event3Image from '@/assets/event3.jpeg';
@@ -9,7 +10,7 @@ import event6Image from '@/assets/event6.jpeg';
 
 export const images = {
   hero: {
-    src: '/background.jpeg',
+    src: background,
     alt: 'Una pareja en un escenario de ópera',
     hint: 'pareja opera',
   },
