@@ -120,6 +120,9 @@ export default {
           '@apply text-transparent bg-clip-text bg-gradient-to-br from-yellow-300 via-yellow-500 to-yellow-600': {},
           'text-shadow': '0 1px 2px rgba(0, 0, 0, 0.2)',
         },
+        '.bg-gold-gradient': {
+          '@apply bg-gradient-to-br from-yellow-300 via-yellow-500 to-yellow-600': {},
+        }
       });
     },],
 } satisfies Config;

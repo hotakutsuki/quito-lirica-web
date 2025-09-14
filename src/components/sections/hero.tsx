@@ -20,7 +20,7 @@ export default function HeroSection() {
           Obtén acceso exclusivo a los eventos de ópera más cotizados y paquetes de reserva a medida.
         </p>
         <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-x-6">
-          <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground" onClick={() => scrollTo('contact')}>
+          <Button size="lg" className="bg-gold-gradient hover:opacity-90 text-primary-foreground" onClick={() => scrollTo('contact')}>
             Solicitar una Presentación
           </Button>
           <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground" onClick={() => scrollTo('events')}>
