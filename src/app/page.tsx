@@ -11,22 +11,11 @@ import { images } from '@/lib/images';
 
 export default function Home() {
   const bannerImage = images.banner; 
-  const heroImage = images.hero;
   
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
       <main className="flex-1">
-        {heroImage && (
-          <Image
-            src={heroImage.src}
-            alt={heroImage.alt}
-            fill
-            className="object-cover -z-10"
-            priority
-            data-ai-hint={heroImage.hint}
-          />
-        )}
         {bannerImage && (
           <div className="relative h-48 w-full">
             <Image

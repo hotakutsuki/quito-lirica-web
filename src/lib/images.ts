@@ -6,11 +6,10 @@ import event3Image from '@/assets/event3.jpeg';
 import event4Image from '@/assets/event4.jpeg';
 import event5Image from '@/assets/event5.jpeg';
 import event6Image from '@/assets/event6.jpeg';
-import backgroundImage from '@/assets/background.jpeg';
 
 export const images = {
   hero: {
-    src: backgroundImage,
+    src: '/background.jpeg',
     alt: 'Una pareja en un escenario de ópera',
     hint: 'pareja opera',
   },
