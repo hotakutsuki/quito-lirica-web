@@ -74,7 +74,7 @@ export default function ContactSection() {
       <div className="container max-w-screen-2xl grid grid-cols-1 lg:grid-cols-2 gap-12 px-4">
         <div className="lg:col-span-1">
           <FadeIn>
-            <h2 className="font-headline text-3xl font-bold tracking-tight text-primary sm:text-4xl">Solicitar una Presentación Privada</h2>
+            <h2 className="font-headline text-3xl font-bold tracking-tight text-gold-gradient sm:text-4xl">Solicitar una Presentación Privada</h2>
             <p className="mt-4 text-lg text-muted-foreground">
               Completa el formulario a continuación para programar una presentación privada y descubrir nuestros paquetes exclusivos.
             </p>
@@ -134,7 +134,7 @@ export default function ContactSection() {
           <FadeIn delay={200}>
             <Card className="bg-card w-full">
               <CardHeader className="text-center">
-                <CardTitle className="text-2xl font-headline text-primary">Reservar por WhatsApp</CardTitle>
+                <CardTitle className="text-2xl font-headline text-gold-gradient">Reservar por WhatsApp</CardTitle>
                 <CardDescription>
                   Escanea un código QR para contactarnos.
                 </CardDescription>

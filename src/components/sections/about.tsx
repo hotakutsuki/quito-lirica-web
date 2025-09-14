@@ -23,7 +23,7 @@ export default function AboutSection() {
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
           <FadeIn>
             <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
-              <h2 className="font-headline text-3xl font-bold tracking-tight text-primary sm:text-4xl">Sobre Quito Lírica Ópera show</h2>
+              <h2 className="font-headline text-3xl font-bold tracking-tight text-gold-gradient sm:text-4xl">Sobre Quito Lírica Ópera show</h2>
               <div className="mt-6 flex items-center gap-4 text-muted-foreground">
                 <Feather className="h-8 w-8 text-primary" />
                 <p className="text-lg">Una historia de pasión, arte y un toque de humor.</p>
