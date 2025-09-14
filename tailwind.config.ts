@@ -113,5 +113,13 @@ export default {
       },
     },
   },
-  plugins: [require('tailwindcss-animate')],
+  plugins: [require('tailwindcss-animate'),
+    function ({ addUtilities }: { addUtilities: any }) {
+      addUtilities({
+        '.text-gold-gradient': {
+          '@apply text-transparent bg-clip-text bg-gradient-to-br from-yellow-300 via-yellow-500 to-yellow-600': {},
+          'text-shadow': '0 1px 2px rgba(0, 0, 0, 0.2)',
+        },
+      });
+    },],
 } satisfies Config;

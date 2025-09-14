@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="flex flex-col items-start gap-4 md:col-span-1">
           <Link href="/" className="flex items-center gap-2">
             <Music2 className="h-8 w-8 text-primary" />
-            <span className="font-headline text-2xl font-bold text-primary">Quito Lírica Ópera show</span>
+            <span className="font-headline text-2xl font-bold text-gold-gradient">Quito Lírica Ópera show</span>
           </Link>
           <p className="text-muted-foreground">Tu pase exclusivo a las mejores presentaciones de ópera del mundo.</p>
         </div>
