@@ -17,10 +17,10 @@ export default function HeroSection() {
           Un espectáculo para no olvidar
         </h1>
         <p className="mt-6 text-lg leading-8 text-foreground/90">
-          Obtén acceso exclusivo a los eventos de ópera más cotizados y paquetes de reserva a medida.
+          Shows interactivos y dinámicos
         </p>
         <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-x-6">
-          <Button size="lg" className="bg-gold-gradient hover:opacity-90 text-primary-foreground" onClick={() => scrollTo('contact')}>
+          <Button size="lg" className="bg-gold-gradient text-primary-foreground hover:opacity-90" onClick={() => scrollTo('contact')}>
             Solicitar una Presentación
           </Button>
           <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-gold-gradient hover:text-primary-foreground" onClick={() => scrollTo('events')}>
