@@ -56,7 +56,7 @@ export default function EventsSection() {
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="font-headline text-3xl font-bold tracking-tight text-gold-gradient sm:text-4xl">Eventos y Paquetes Exclusivos</h2>
             <p className="mt-4 text-lg text-muted-foreground">
-              Ofrecemos experiencias curadas y paquetes de reserva premium para los teatros de ópera más prestigiosos.
+              Ofrecemos entretenimiento en varios formatos.
             </p>
           </div>
         </FadeIn>
