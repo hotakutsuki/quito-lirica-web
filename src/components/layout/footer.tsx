@@ -29,9 +29,9 @@ export default function Footer() {
         </div>
         <div className="flex flex-col gap-2">
           <h3 className="font-headline text-lg font-semibold text-primary">Redes Sociales</h3>
-          <a href="https://www.facebook.com/quitolirica.operashow" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-muted-foreground hover:text-primary">
+          <a href="https://www.facebook.com/quitolirica/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-muted-foreground hover:text-primary">
             <Facebook className="h-4 w-4 text-primary" />
-            <span>@quitolirica.operashow</span>
+            <span>@quitolirica</span>
           </a>
           <a href="https://www.instagram.com/abigailrosero.soprano" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-muted-foreground hover:text-primary">
             <Instagram className="h-4 w-4 text-primary" />
