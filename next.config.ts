@@ -44,7 +44,7 @@ const nextConfig: NextConfig = {
         options: {
           publicPath: '/_next/static/sounds/',
           outputPath: 'static/sounds/',
-          name: '[name].[ext]',
+          name: '[name].[hash].[ext]',
         },
       },
     });
