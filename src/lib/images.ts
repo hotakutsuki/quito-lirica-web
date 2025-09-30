@@ -1,3 +1,4 @@
+
 import principalImage from '@/assets/principal.jpeg';
 import bannerOperaImage from '@/assets/banner_opera.jpeg';
 import background from '@/assets/background.jpeg'
@@ -9,47 +10,27 @@ import event5Image from '@/assets/event5.jpeg';
 import event6Image from '@/assets/event6.jpeg';
 import event7Image from '@/assets/event7.jpeg';
 
+const event1 = { src: event1Image, alt: 'Escena de La Traviata de Verdi', hint: 'pareja opera' };
+const event2 = { src: event2Image, alt: 'Escena de La Flauta Mágica de Mozart', hint: 'pareja opera' };
+const event3 = { src: event3Image, alt: 'Escena de Carmen de Bizet', hint: 'pareja opera' };
+const event4 = { src: event4Image, alt: 'Escena de Don Giovanni de Mozart', hint: 'hombre opera' };
+const event5 = { src: event5Image, alt: 'Escena de Las bodas de Fígaro de Mozart', hint: 'gente opera' };
+const event6 = { src: event6Image, alt: 'Escena de Tosca de Puccini', hint: 'mujer opera' };
+const event7 = { src: event7Image, alt: 'Escena de Rigoletto de Verdi', hint: 'hombre opera' };
+
 export const images = {
   hero: {
     src: background,
     alt: 'Una pareja en un escenario de ópera',
     hint: 'pareja opera',
   },
-  event1: {
-    src: event1Image,
-    alt: 'Escena de La Traviata de Verdi',
-    hint: 'pareja opera',
-  },
-  event2: {
-    src: event2Image,
-    alt: 'Escena de La Flauta Mágica de Mozart',
-    hint: 'pareja opera',
-  },
-  event3: {
-    src: event3Image,
-    alt: 'Escena de Carmen de Bizet',
-    hint: 'pareja opera',
-  },
-  event4: {
-    src: event4Image,
-    alt: 'Escena de Don Giovanni de Mozart',
-    hint: 'hombre opera',
-  },
-  event5: {
-    src: event5Image,
-    alt: 'Escena de Las bodas de Fígaro de Mozart',
-    hint: 'gente opera',
-  },
-  event6: {
-    src: event6Image,
-    alt: 'Escena de Tosca de Puccini',
-    hint: 'mujer opera',
-  },
-  event7: {
-    src: event7Image,
-    alt: 'Escena de Rigoletto de Verdi',
-    hint: 'hombre opera',
-  },
+  event1: event1,
+  event2: event2,
+  event3: event3,
+  event4: event4,
+  event5: event5,
+  event6: event6,
+  event7: event7,
   about: {
     src: principalImage,
     alt: 'Los fundadores de Quito Lírica Ópera show',
@@ -59,5 +40,11 @@ export const images = {
     src: bannerOperaImage,
     alt: 'Banner de Quito Lírica Ópera show',
     hint: 'opera banner',
-  }
+  },
+  eventCarousel1: [event1, event2, event3],
+  eventCarousel2: [event4, event5, event6],
+  eventCarousel3: [event7, event1, event2],
+  eventCarousel4: [event3, event4, event5],
+  eventCarousel5: [event6, event7, event1],
+  eventCarousel6: [event2, event3, event4],
 };
