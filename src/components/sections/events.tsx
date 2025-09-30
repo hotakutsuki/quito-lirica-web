@@ -142,26 +142,28 @@ export default function EventsSection() {
                   <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2" />
                 </Carousel>
                 <CardContent className="flex flex-col flex-grow p-6">
-                  <h3 className="flex items-center gap-2 text-2xl font-headline text-foreground">
-                    <Ticket className="h-6 w-6 text-primary" />
-                    {event.title}
-                  </h3>
-                  <p className="pt-2 text-muted-foreground flex-grow">{event.description}</p>
-                  <div className="mt-4 flex items-center gap-4">
-                    <Button
-                      variant="outline"
-                      size="icon"
-                      onClick={() => toggleAudio(event.audioSrc)}
-                      aria-label={playingAudio === event.audioSrc ? 'Pausar audio' : 'Reproducir audio'}
-                    >
-                      {playingAudio === event.audioSrc ? <Pause className="h-5 w-5" /> : <Play className="h-5 w-5" />}
-                    </Button>
-                    <Button asChild variant="outline" size="icon">
-                      <Link href={event.youtubeUrl} target="_blank" rel="noopener noreferrer" aria-label="Ver video en YouTube">
-                        <Youtube className="h-5 w-5 text-red-600" />
-                      </Link>
-                    </Button>
+                  <div className="flex justify-between items-center mb-4">
+                    <h3 className="flex items-center gap-2 text-xl font-headline text-foreground">
+                      <Ticket className="h-6 w-6 text-primary" />
+                      {event.title}
+                    </h3>
+                    <div className="flex items-center gap-2">
+                      <Button
+                        variant="outline"
+                        size="icon"
+                        onClick={() => toggleAudio(event.audioSrc)}
+                        aria-label={playingAudio === event.audioSrc ? 'Pausar audio' : 'Reproducir audio'}
+                      >
+                        {playingAudio === event.audioSrc ? <Pause className="h-5 w-5" /> : <Play className="h-5 w-5" />}
+                      </Button>
+                      <Button asChild variant="outline" size="icon">
+                        <Link href={event.youtubeUrl} target="_blank" rel="noopener noreferrer" aria-label="Ver video en YouTube">
+                          <Youtube className="h-5 w-5 text-red-600" />
+                        </Link>
+                      </Button>
+                    </div>
                   </div>
+                  <p className="text-muted-foreground flex-grow">{event.description}</p>
                 </CardContent>
               </Card>
             </FadeIn>
