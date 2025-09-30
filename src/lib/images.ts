@@ -37,7 +37,6 @@ import showDeOpera5 from '@/assets/ShowDeOpera/1 (5).jpg';
 import showDeOpera6 from '@/assets/ShowDeOpera/1 (6).jpg';
 import showDeOpera7 from '@/assets/ShowDeOpera/1 (7).jpg';
 import showDeOpera8 from '@/assets/ShowDeOpera/1 (8).jpg';
-import showDeOpera9 from '@/assets/ShowDeOpera/1 (9).jpg';
 import showDeOpera10 from '@/assets/ShowDeOpera/1 (10).jpg';
 import showDeOpera11 from '@/assets/ShowDeOpera/1 (11).jpg';
 
@@ -78,6 +77,14 @@ import ceremonias2 from '@/assets/CeremoniasReligiosas/1 (2).jpg';
 import ceremonias3 from '@/assets/CeremoniasReligiosas/1 (3).jpg';
 import ceremonias4 from '@/assets/CeremoniasReligiosas/1 (4).jpg';
 
+// Recursos Educativos
+import recursos1 from '@/assets/RecursosEducativos/1 (1).jpg';
+import recursos2 from '@/assets/RecursosEducativos/1 (2).jpg';
+import recursos3 from '@/assets/RecursosEducativos/1 (3).jpg';
+import recursos4 from '@/assets/RecursosEducativos/1 (4).jpg';
+import recursos5 from '@/assets/RecursosEducativos/1 (5).jpg';
+
+
 // Audios
 import galaLiricaAudio from '@/assets/GalaLirica/s.mp3';
 import operaBrassAudio from '@/assets/OperaBrass/s.mp3';
@@ -85,6 +92,7 @@ import showDeOperaAudio from '@/assets/ShowDeOpera/s.mp3';
 import conciertosAudio from '@/assets/ConciertosYMontajesEnVivo/s.mp3';
 import flashmobsAudio from '@/assets/FlashmobsYEventosCorporativos/s.mp3';
 import ceremoniasAudio from '@/assets/CeremoniasReligiosas/s.mp3';
+import recursosEducativosAudio from '@/assets/RecursosEducativos/s.mp3';
 
 
 const galaLiricaImages = [
@@ -120,7 +128,6 @@ const showDeOperaImages = [
   { src: showDeOpera6, alt: 'Cena y show de ópera 6', hint: 'audiencia concierto' },
   { src: showDeOpera7, alt: 'Cena y show de ópera 7', hint: 'audiencia concierto' },
   { src: showDeOpera8, alt: 'Cena y show de ópera 8', hint: 'audiencia concierto' },
-  { src: showDeOpera9, alt: 'Cena y show de ópera 9', hint: 'audiencia concierto' },
   { src: showDeOpera10, alt: 'Cena y show de ópera 10', hint: 'audiencia concierto' },
   { src: showDeOpera11, alt: 'Cena y show de ópera 11', hint: 'audiencia concierto' },
 ];
@@ -162,6 +169,14 @@ const ceremoniasImages = [
   { src: ceremonias4, alt: 'Boda en iglesia 4', hint: 'musica boda' },
 ];
 
+const recursosEducativosImages = [
+    { src: recursos1, alt: 'Clase maestra de canto 1', hint: 'clase canto' },
+    { src: recursos2, alt: 'Estudiantes de música 2', hint: 'estudiantes musica' },
+    { src: recursos3, alt: 'Ensayo de coro 3', hint: 'coro ensayo' },
+    { src: recursos4, alt: 'Clase de piano 4', hint: 'clase piano' },
+    { src: recursos5, alt: 'Presentación escolar 5', hint: 'concierto escuela' },
+];
+
 
 export const images = {
   hero: {
@@ -185,6 +200,7 @@ export const images = {
   eventCarousel4: conciertosImages,
   eventCarousel5: flashmobsImages,
   eventCarousel6: ceremoniasImages,
+  educationCarousel: recursosEducativosImages,
 };
 
 export const audios = {
@@ -194,4 +210,5 @@ export const audios = {
   conciertos: conciertosAudio,
   flashmobs: flashmobsAudio,
   ceremonias: ceremoniasAudio,
+  recursosEducativos: recursosEducativosAudio,
 };

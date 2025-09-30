@@ -8,6 +8,7 @@ import ContactSection from '@/components/sections/contact';
 import NewsletterSection from '@/components/sections/newsletter';
 import Image from 'next/image';
 import { images } from '@/lib/images';
+import EducationSection from '@/components/sections/education';
 
 export default function Home() {
   const bannerImage = images.banner; 
@@ -30,6 +31,7 @@ export default function Home() {
         )}
         <HeroSection />
         <EventsSection />
+        <EducationSection />
         <AboutSection />
         <NewsletterSection />
         <ContactSection />
