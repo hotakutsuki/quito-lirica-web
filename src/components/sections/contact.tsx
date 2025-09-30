@@ -149,7 +149,6 @@ export default function ContactSection() {
                         height={128}
                       />
                     </div>
-                    <p className="text-sm text-center text-muted-foreground">Abigail Rosero</p>
                     <Button asChild variant="outline" size="sm" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
                       <a href={whatsappLinkAbigail} target="_blank" rel="noopener noreferrer">
                         Abrir WhatsApp
