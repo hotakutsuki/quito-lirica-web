@@ -1,3 +1,4 @@
+
 'use server';
 /**
  * @fileOverview A flow for handling contact form submissions.
@@ -12,6 +13,7 @@ import { z } from 'genkit';
 const ContactFormInputSchema = z.object({
   name: z.string().describe('The name of the person sending the message.'),
   email: z.string().email().describe('The email of the person sending the message.'),
+  phone: z.string().optional().describe('The phone number of the person sending the message.'),
   message: z.string().describe('The message content.'),
 });
 
@@ -32,6 +34,9 @@ const emailPrompt = ai.definePrompt({
     Here is the user's information:
     Name: {{{name}}}
     Email: {{{email}}}
+    {{#if phone}}
+    Phone: {{{phone}}}
+    {{/if}}
     Message:
     {{{message}}}
 
