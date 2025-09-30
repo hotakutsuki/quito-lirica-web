@@ -78,6 +78,14 @@ import ceremonias2 from '@/assets/CeremoniasReligiosas/1 (2).jpg';
 import ceremonias3 from '@/assets/CeremoniasReligiosas/1 (3).jpg';
 import ceremonias4 from '@/assets/CeremoniasReligiosas/1 (4).jpg';
 
+// Audios
+import galaLiricaAudio from '@/assets/GalaLirica/s.mp3';
+import operaBrassAudio from '@/assets/OperaBrass/s.mp3';
+import showDeOperaAudio from '@/assets/ShowDeOpera/s.mp3';
+import conciertosAudio from '@/assets/ConciertosYMontajesEnVivo/s.mp3';
+import flashmobsAudio from '@/assets/FlashmobsYEventosCorporativos/s.mp3';
+import ceremoniasAudio from '@/assets/CeremoniasReligiosas/s.mp3';
+
 
 const galaLiricaImages = [
   { src: galaLirica1, alt: 'Escena de Gala Lírica 1', hint: 'pareja opera' },
@@ -163,12 +171,12 @@ export const images = {
   },
   about: {
     src: principalImage,
-    alt: 'Los fundadores de Quito Lírica Ópera show',
+    alt: 'Los fundadores de Quito Lírica Ópera Show',
     hint: 'pareja opera',
   },
   banner: {
     src: bannerOperaImage,
-    alt: 'Banner de Quito Lírica Ópera show',
+    alt: 'Banner de Quito Lírica Ópera Show',
     hint: 'opera banner',
   },
   eventCarousel1: galaLiricaImages,
@@ -179,3 +187,11 @@ export const images = {
   eventCarousel6: ceremoniasImages,
 };
 
+export const audios = {
+  galaLirica: galaLiricaAudio,
+  operaBrass: operaBrassAudio,
+  showDeOpera: showDeOperaAudio,
+  conciertos: conciertosAudio,
+  flashmobs: flashmobsAudio,
+  ceremonias: ceremoniasAudio,
+};
