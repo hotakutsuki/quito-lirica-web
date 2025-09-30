@@ -116,7 +116,7 @@ export default function EducationSection() {
                       <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2" />
                       <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2" />
                     </Carousel>
-                     <CardContent className="p-4 flex justify-end">
+                     <CardContent className="p-4 flex justify-center">
                         <Button
                           variant="outline"
                           size="icon"
