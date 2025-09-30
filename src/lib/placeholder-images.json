@@ -1,0 +1,161 @@
+{
+  "galaLirica": [
+    {
+      "src": "https://picsum.photos/seed/gl1/600/400",
+      "alt": "Imagen 1 de Gala Lírica",
+      "hint": "gala opera"
+    },
+    {
+      "src": "https://picsum.photos/seed/gl2/600/400",
+      "alt": "Imagen 2 de Gala Lírica",
+      "hint": "gala opera"
+    },
+    {
+      "src": "https://picsum.photos/seed/gl3/600/400",
+      "alt": "Imagen 3 de Gala Lírica",
+      "hint": "gala opera"
+    },
+    {
+      "src": "https://picsum.photos/seed/gl4/600/400",
+      "alt": "Imagen 4 de Gala Lírica",
+      "hint": "gala opera"
+    },
+    {
+      "src": "https://picsum.photos/seed/gl5/600/400",
+      "alt": "Imagen 5 de Gala Lírica",
+      "hint": "gala opera"
+    },
+    {
+      "src": "https://picsum.photos/seed/gl6/600/400",
+      "alt": "Imagen 6 de Gala Lírica",
+      "hint": "gala opera"
+    },
+    {
+      "src": "https://picsum.photos/seed/gl7/600/400",
+      "alt": "Imagen 7 de Gala Lírica",
+      "hint": "gala opera"
+    },
+    {
+      "src": "https://picsum.photos/seed/gl8/600/400",
+      "alt": "Imagen 8 de Gala Lírica",
+      "hint": "gala opera"
+    },
+    {
+      "src": "https://picsum.photos/seed/gl9/600/400",
+      "alt": "Imagen 9 de Gala Lírica",
+      "hint": "gala opera"
+    }
+  ],
+  "eventCarousel1": [
+    {
+      "src": "https://picsum.photos/seed/ev1/600/400",
+      "alt": "Escena de La Traviata de Verdi",
+      "hint": "pareja opera"
+    },
+    {
+      "src": "https://picsum.photos/seed/ev2/600/400",
+      "alt": "Escena de La Flauta Mágica de Mozart",
+      "hint": "pareja opera"
+    },
+    {
+      "src": "https://picsum.photos/seed/ev3/600/400",
+      "alt": "Escena de Carmen de Bizet",
+      "hint": "pareja opera"
+    }
+  ],
+  "eventCarousel2": [
+    {
+      "src": "https://picsum.photos/seed/ev4/600/400",
+      "alt": "Escena de Don Giovanni de Mozart",
+      "hint": "hombre opera"
+    },
+    {
+      "src": "https://picsum.photos/seed/ev5/600/400",
+      "alt": "Escena de Las bodas de Fígaro de Mozart",
+      "hint": "gente opera"
+    },
+    {
+      "src": "https://picsum.photos/seed/ev6/600/400",
+      "alt": "Escena de Tosca de Puccini",
+      "hint": "mujer opera"
+    }
+  ],
+  "eventCarousel3": [
+    {
+      "src": "https://picsum.photos/seed/ev7/600/400",
+      "alt": "Escena de Rigoletto de Verdi",
+      "hint": "hombre opera"
+    },
+    {
+      "src": "https://picsum.photos/seed/ev1/600/400",
+      "alt": "Escena de La Traviata de Verdi",
+      "hint": "pareja opera"
+    },
+    {
+      "src": "https://picsum.photos/seed/ev2/600/400",
+      "alt": "Escena de La Flauta Mágica de Mozart",
+      "hint": "pareja opera"
+    }
+  ],
+  "eventCarousel4": [
+    {
+      "src": "https://picsum.photos/seed/ev3/600/400",
+      "alt": "Escena de Carmen de Bizet",
+      "hint": "pareja opera"
+    },
+    {
+      "src": "https://picsum.photos/seed/ev4/600/400",
+      "alt": "Escena de Don Giovanni de Mozart",
+      "hint": "hombre opera"
+    },
+    {
+      "src": "https://picsum.photos/seed/ev5/600/400",
+      "alt": "Escena de Las bodas de Fígaro de Mozart",
+      "hint": "gente opera"
+    }
+  ],
+  "eventCarousel5": [
+    {
+      "src": "https://picsum.photos/seed/ev6/600/400",
+      "alt": "Escena de Tosca de Puccini",
+      "hint": "mujer opera"
+    },
+    {
+      "src": "https://picsum.photos/seed/ev7/600/400",
+      "alt": "Escena de Rigoletto de Verdi",
+      "hint": "hombre opera"
+    },
+    {
+      "src": "https://picsum.photos/seed/ev1/600/400",
+      "alt": "Escena de La Traviata de Verdi",
+      "hint": "pareja opera"
+    }
+  ],
+  "eventCarousel6": [
+    {
+      "src": "https://picsum.photos/seed/ev2/600/400",
+      "alt": "Escena de La Flauta Mágica de Mozart",
+      "hint": "pareja opera"
+    },
+    {
+      "src": "https://picsum.photos/seed/ev3/600/400",
+      "alt": "Escena de Carmen de Bizet",
+      "hint": "pareja opera"
+    },
+    {
+      "src": "https://picsum.photos/seed/ev4/600/400",
+      "alt": "Escena de Don Giovanni de Mozart",
+      "hint": "hombre opera"
+    }
+  ],
+  "about": {
+    "src": "https://picsum.photos/seed/about/600/400",
+    "alt": "Los fundadores de Quito Lírica Ópera show",
+    "hint": "pareja opera"
+  },
+  "banner": {
+    "src": "https://picsum.photos/seed/banner/1200/400",
+    "alt": "Banner de Quito Lírica Ópera show",
+    "hint": "opera banner"
+  }
+}

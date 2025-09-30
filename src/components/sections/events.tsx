@@ -1,3 +1,4 @@
+
 'use client';
 
 import Image from 'next/image';
@@ -5,7 +6,6 @@ import {
   Card,
   CardContent,
 } from '@/components/ui/card';
-import { images } from '@/lib/images';
 import { Ticket } from 'lucide-react';
 import { FadeIn } from '@/components/animations/fade-in';
 import {
@@ -17,37 +17,39 @@ import {
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import * as React from 'react';
+import imageData from '@/lib/placeholder-images.json';
+
 
 const events = [
   {
     title: 'Gala Lírica',
     description: 'Un formato de concierto clásico con un repertorio selecto de ópera y zarzuela para audiencias refinadas.',
-    images: images.eventCarousel4,
+    images: imageData.galaLirica,
   },
   {
     title: 'Opera Brass',
     description: 'Una fusión innovadora de potentes voces líricas y la majestuosidad de un ensamble de instrumentos de viento-metal.',
-    images: images.eventCarousel5,
+    images: imageData.eventCarousel5,
   },
   {
     title: 'Show de Ópera',
     description: 'Una experiencia íntima y sorprendente que combina alta cocina con las mejores arias de ópera, interpretadas entre los comensales.',
-    images: images.eventCarousel1,
+    images: imageData.eventCarousel1,
   },
   {
     title: 'Conciertos y Montajes en vivo',
     description: 'Producciones completas y conciertos temáticos diseñados para teatros y grandes escenarios, llevando la ópera a su máxima expresión.',
-    images: images.eventCarousel6,
+    images: imageData.eventCarousel6,
   },
   {
     title: 'Flashmobs y Eventos Corporativos',
     description: 'Añade un toque de distinción y sorprende a tus invitados con cantantes infiltrados que crean un momento único e impactante.',
-    images: images.eventCarousel2,
+    images: imageData.eventCarousel2,
   },
   {
     title: 'Ceremonias Religiosas',
     description: 'Acompañamiento musical con un repertorio sacro y solemne para bodas y otros eventos litúrgicos, añadiendo un toque celestial.',
-    images: images.eventCarousel3,
+    images: imageData.eventCarousel3,
   },
 ];
 
@@ -85,7 +87,7 @@ export default function EventsSection() {
                         <div className="relative h-60 w-full">
                           <Image
                             src={img.src}
-                            alt={event.title}
+                            alt={img.alt}
                             fill
                             className="object-cover"
                             data-ai-hint={img.hint}

@@ -1,4 +1,5 @@
 
+
 import principalImage from '@/assets/principal.jpeg';
 import bannerOperaImage from '@/assets/banner_opera.jpeg';
 import background from '@/assets/background.jpeg'

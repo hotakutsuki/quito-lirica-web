@@ -1,3 +1,4 @@
+
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
 import HeroSection from '@/components/sections/hero';
@@ -7,10 +8,10 @@ import ContactSection from '@/components/sections/contact';
 import VideosSection from '@/components/sections/videos';
 import NewsletterSection from '@/components/sections/newsletter';
 import Image from 'next/image';
-import { images } from '@/lib/images';
+import imageData from '@/lib/placeholder-images.json';
 
 export default function Home() {
-  const bannerImage = images.banner; 
+  const bannerImage = imageData.banner; 
   
   return (
     <div className="flex min-h-screen flex-col">
