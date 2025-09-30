@@ -1,4 +1,3 @@
-
 'use client';
 
 import Image from 'next/image';
@@ -21,34 +20,34 @@ import * as React from 'react';
 
 const events = [
   {
-    title: 'Cena Show',
-    description: 'Una experiencia íntima que combina alta cocina con las mejores arias de ópera, interpretadas entre los comensales.',
-    images: images.eventCarousel1,
-  },
-  {
-    title: 'Eventos Corporativos',
-    description: 'Añade un toque de distinción y cultura a tus eventos de empresa con un espectáculo lírico inolvidable.',
-    images: images.eventCarousel2,
-  },
-  {
-    title: 'Ópera Secreta y Flashmobs',
-    description: 'Sorprende a tus invitados con cantantes infiltrados que irrumpen en escena creando un momento único e impactante.',
-    images: images.eventCarousel3,
-  },
-  {
     title: 'Gala Lírica',
     description: 'Un formato de concierto clásico con un repertorio selecto de ópera y zarzuela para audiencias refinadas.',
     images: images.eventCarousel4,
   },
   {
-    title: 'Opera-Brass',
+    title: 'Opera Brass',
     description: 'Una fusión innovadora de potentes voces líricas y la majestuosidad de un ensamble de instrumentos de viento-metal.',
     images: images.eventCarousel5,
   },
   {
-    title: 'Montajes y Conciertos',
-    description: 'Producciones completas y conciertos temáticos diseñados para teatros y grandes escenarios.',
+    title: 'Show de Ópera',
+    description: 'Una experiencia íntima y sorprendente que combina alta cocina con las mejores arias de ópera, interpretadas entre los comensales.',
+    images: images.eventCarousel1,
+  },
+  {
+    title: 'Conciertos y Montajes en vivo',
+    description: 'Producciones completas y conciertos temáticos diseñados para teatros y grandes escenarios, llevando la ópera a su máxima expresión.',
     images: images.eventCarousel6,
+  },
+  {
+    title: 'Flashmobs y Eventos Corporativos',
+    description: 'Añade un toque de distinción y sorprende a tus invitados con cantantes infiltrados que crean un momento único e impactante.',
+    images: images.eventCarousel2,
+  },
+  {
+    title: 'Ceremonias Religiosas',
+    description: 'Acompañamiento musical con un repertorio sacro y solemne para bodas y otros eventos litúrgicos, añadiendo un toque celestial.',
+    images: images.eventCarousel3,
   },
 ];
 
