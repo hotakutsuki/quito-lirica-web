@@ -1,7 +1,7 @@
 
 'use client';
 
-import imageData from '@/lib/placeholder-images.json';
+import { images } from '@/lib/images';
 import { Feather, ChevronDown } from 'lucide-react';
 import Image from 'next/image';
 import { FadeIn } from '@/components/animations/fade-in';
@@ -15,7 +15,7 @@ import { useState } from 'react';
 import * as React from 'react';
 
 export default function AboutSection() {
-  const aboutImage = imageData.about;
+  const aboutImage = images.about;
   const [isOpen, setIsOpen] = useState(false);
 
   return (

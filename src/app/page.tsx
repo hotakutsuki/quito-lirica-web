@@ -8,10 +8,10 @@ import ContactSection from '@/components/sections/contact';
 import VideosSection from '@/components/sections/videos';
 import NewsletterSection from '@/components/sections/newsletter';
 import Image from 'next/image';
-import imageData from '@/lib/placeholder-images.json';
+import { images } from '@/lib/images';
 
 export default function Home() {
-  const bannerImage = imageData.banner; 
+  const bannerImage = images.banner; 
   
   return (
     <div className="flex min-h-screen flex-col">
