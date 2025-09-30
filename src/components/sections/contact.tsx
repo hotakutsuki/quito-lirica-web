@@ -71,6 +71,37 @@ export default function ContactSection() {
   return (
     <section id="contact" className="py-20 sm:py-32">
       <div className="container max-w-screen-2xl grid grid-cols-1 lg:grid-cols-2 gap-12 px-4">
+        <div className="lg:col-span-1 flex flex-col justify-center items-center">
+          <FadeIn delay={200}>
+            <Card className="bg-card w-full">
+              <CardHeader className="text-center">
+                <CardTitle className="text-2xl font-headline text-gold-gradient">Reservar por WhatsApp</CardTitle>
+                <CardDescription>
+                  Escanea el código QR para contactarnos.
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="flex flex-col items-center justify-center gap-6">
+                <div className="flex flex-row gap-4 justify-center">
+                  <div className="flex flex-col items-center gap-2">
+                    <div className="rounded-lg border-2 border-primary bg-background p-2">
+                      <Image 
+                        src={qrCodeUrlAbigail}
+                        alt="Código QR de WhatsApp para Abigail Rosero"
+                        width={128}
+                        height={128}
+                      />
+                    </div>
+                    <Button asChild variant="outline" size="sm" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+                      <a href={whatsappLinkAbigail} target="_blank" rel="noopener noreferrer">
+                        Abrir WhatsApp
+                      </a>
+                    </Button>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </FadeIn>
+        </div>
         <div className="lg:col-span-1">
           <FadeIn>
             <h2 className="font-headline text-3xl font-bold tracking-tight text-gold-gradient sm:text-4xl">Solicitar una Presentación Privada</h2>
@@ -127,37 +158,6 @@ export default function ContactSection() {
                 </Button>
               </form>
             </Form>
-          </FadeIn>
-        </div>
-        <div className="lg:col-span-1 flex flex-col justify-center items-center">
-          <FadeIn delay={200}>
-            <Card className="bg-card w-full">
-              <CardHeader className="text-center">
-                <CardTitle className="text-2xl font-headline text-gold-gradient">Reservar por WhatsApp</CardTitle>
-                <CardDescription>
-                  Escanea el código QR para contactarnos.
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="flex flex-col items-center justify-center gap-6">
-                <div className="flex flex-row gap-4 justify-center">
-                  <div className="flex flex-col items-center gap-2">
-                    <div className="rounded-lg border-2 border-primary bg-background p-2">
-                      <Image 
-                        src={qrCodeUrlAbigail}
-                        alt="Código QR de WhatsApp para Abigail Rosero"
-                        width={128}
-                        height={128}
-                      />
-                    </div>
-                    <Button asChild variant="outline" size="sm" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-                      <a href={whatsappLinkAbigail} target="_blank" rel="noopener noreferrer">
-                        Abrir WhatsApp
-                      </a>
-                    </Button>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
           </FadeIn>
         </div>
       </div>
