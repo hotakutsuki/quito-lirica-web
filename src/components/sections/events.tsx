@@ -22,32 +22,32 @@ import * as React from 'react';
 const events = [
   {
     title: 'Gala Lírica',
-    description: 'Un formato de concierto clásico con un repertorio selecto de ópera y zarzuela para audiencias refinadas.',
+    description: 'Interpretación estilo concierto para un ambiente formal y distinguido.',
     images: images.eventCarousel1,
   },
   {
     title: 'Opera Brass',
-    description: 'Una fusión innovadora de potentes voces líricas y la majestuosidad de un ensamble de instrumentos de viento-metal.',
+    description: 'Escucha el inigualable sonido de las voces líricas y la potencia del ensamble de Brass en un concierto brillante.',
     images: images.eventCarousel2,
   },
   {
     title: 'Show de Ópera',
-    description: 'Una experiencia íntima y sorprendente que combina alta cocina con las mejores arias de ópera, interpretadas entre los comensales.',
+    description: 'Ópera en movimiento para la recepción o cena formal. Las voces líricas a pocos metros de distancia crearán una experiencia envolvente e impactante.',
     images: images.eventCarousel3,
   },
   {
     title: 'Conciertos y Montajes en vivo',
-    description: 'Producciones completas y conciertos temáticos diseñados para teatros y grandes escenarios, llevando la ópera a su máxima expresión.',
+    description: 'Disfruta de conciertos y montajes con músicos en vivo en nuestras temporadas artísticas del más alto nivel.',
     images: images.eventCarousel4,
   },
   {
     title: 'Flashmobs y Eventos Corporativos',
-    description: 'Añade un toque de distinción y sorprende a tus invitados con cantantes infiltrados que crean un momento único e impactante.',
+    description: 'Visibiliza y potencia tu marca con un espectáculo sorpresivo para tus invitados o asistentes.',
     images: images.eventCarousel5,
   },
   {
     title: 'Ceremonias Religiosas',
-    description: 'Acompañamiento musical con un repertorio sacro y solemne para bodas y otros eventos litúrgicos, añadiendo un toque celestial.',
+    description: 'Música sacra que resuena con la fe y la solemnidad del momento.',
     images: images.eventCarousel6,
   },
 ];
