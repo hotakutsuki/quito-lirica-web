@@ -19,37 +19,36 @@ import Autoplay from "embla-carousel-autoplay";
 import * as React from 'react';
 import imageData from '@/lib/placeholder-images.json';
 
-
 const events = [
   {
     title: 'Gala Lírica',
     description: 'Un formato de concierto clásico con un repertorio selecto de ópera y zarzuela para audiencias refinadas.',
-    images: imageData.galaLirica,
+    images: imageData.eventCarousels.galaLirica,
   },
   {
     title: 'Opera Brass',
     description: 'Una fusión innovadora de potentes voces líricas y la majestuosidad de un ensamble de instrumentos de viento-metal.',
-    images: imageData.eventCarousel5,
+    images: imageData.eventCarousels.operaBrass,
   },
   {
     title: 'Show de Ópera',
     description: 'Una experiencia íntima y sorprendente que combina alta cocina con las mejores arias de ópera, interpretadas entre los comensales.',
-    images: imageData.eventCarousel1,
+    images: imageData.eventCarousels.showDeOpera,
   },
   {
     title: 'Conciertos y Montajes en vivo',
     description: 'Producciones completas y conciertos temáticos diseñados para teatros y grandes escenarios, llevando la ópera a su máxima expresión.',
-    images: imageData.eventCarousel6,
+    images: imageData.eventCarousels.conciertos,
   },
   {
     title: 'Flashmobs y Eventos Corporativos',
     description: 'Añade un toque de distinción y sorprende a tus invitados con cantantes infiltrados que crean un momento único e impactante.',
-    images: imageData.eventCarousel2,
+    images: imageData.eventCarousels.flashmobs,
   },
   {
     title: 'Ceremonias Religiosas',
     description: 'Acompañamiento musical con un repertorio sacro y solemne para bodas y otros eventos litúrgicos, añadiendo un toque celestial.',
-    images: imageData.eventCarousel3,
+    images: imageData.eventCarousels.ceremonias,
   },
 ];
 
