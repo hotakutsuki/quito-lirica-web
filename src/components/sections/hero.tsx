@@ -14,7 +14,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-background/70" />
       <div className="relative z-10 max-w-4xl px-4">
         <h1 className="font-headline text-4xl font-bold tracking-tight text-gold-gradient sm:text-6xl lg:text-7xl">
-          Vive la Ópera Como Nunca Antes
+          Un espectáculo para no olvidar
         </h1>
         <p className="mt-6 text-lg leading-8 text-foreground/90">
           Obtén acceso exclusivo a los eventos de ópera más cotizados y paquetes de reserva a medida.
