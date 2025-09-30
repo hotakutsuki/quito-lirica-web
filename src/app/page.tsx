@@ -5,7 +5,6 @@ import HeroSection from '@/components/sections/hero';
 import EventsSection from '@/components/sections/events';
 import AboutSection from '@/components/sections/about';
 import ContactSection from '@/components/sections/contact';
-import VideosSection from '@/components/sections/videos';
 import NewsletterSection from '@/components/sections/newsletter';
 import Image from 'next/image';
 import { images } from '@/lib/images';
@@ -31,7 +30,6 @@ export default function Home() {
         )}
         <HeroSection />
         <EventsSection />
-        <VideosSection />
         <AboutSection />
         <NewsletterSection />
         <ContactSection />
