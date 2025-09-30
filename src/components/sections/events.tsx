@@ -26,7 +26,7 @@ const events = [
     images: images.eventCarousel1,
   },
   {
-    title: 'Opera Brass',
+    title: 'Ópera & Brass',
     description: 'Escucha el inigualable sonido de las voces líricas y la potencia del ensamble de Brass en un concierto brillante.',
     images: images.eventCarousel2,
   },
