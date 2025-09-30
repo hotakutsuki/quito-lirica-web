@@ -12,39 +12,34 @@ import { FadeIn } from '@/components/animations/fade-in';
 
 const events = [
   {
-    title: 'La Traviata de Verdi',
-    description: 'Una historia atemporal de amor y sacrificio en el corazón de París. Una nueva producción espectacular.',
+    title: 'Cena Show',
+    description: 'Una experiencia íntima que combina alta cocina con las mejores arias de ópera, interpretadas entre los comensales.',
     image: images.event1,
   },
   {
-    title: 'La Flauta Mágica de Mozart',
-    description: 'Embárcate en un viaje mítico lleno de música encantadora y personajes fantásticos.',
+    title: 'Eventos Corporativos',
+    description: 'Añade un toque de distinción y cultura a tus eventos de empresa con un espectáculo lírico inolvidable.',
     image: images.event2,
   },
   {
-    title: 'Carmen de Bizet',
-    description: 'Vive la pasión ardiente y la intensidad dramática de una de las óperas más populares del mundo.',
+    title: 'Ópera Secreta y Flashmobs',
+    description: 'Sorprende a tus invitados con cantantes infiltrados que irrumpen en escena creando un momento único e impactante.',
     image: images.event3,
   },
   {
-    title: 'Don Giovanni de Mozart',
-    description: 'La oscura y carismática historia de un libertino que desafía todas las normas sociales y divinas.',
+    title: 'Gala Lírica',
+    description: 'Un formato de concierto clásico con un repertorio selecto de ópera y zarzuela para audiencias refinadas.',
     image: images.event4,
   },
   {
-    title: 'Las bodas de Fígaro',
-    description: 'Una comedia de intrigas, amor y enredos en un solo día de locura en el palacio del Conde de Almaviva.',
+    title: 'Opera-Brass',
+    description: 'Una fusión innovadora de potentes voces líricas y la majestuosidad de un ensamble de instrumentos de viento-metal.',
     image: images.event5,
   },
   {
-    title: 'Tosca de Puccini',
-    description: 'Un thriller operístico de amor, celos y política en la Roma de 1800.',
+    title: 'Montajes y Conciertos',
+    description: 'Producciones completas y conciertos temáticos diseñados para teatros y grandes escenarios.',
     image: images.event6,
-  },
-  {
-    title: 'Rigoletto de Verdi',
-    description: 'Un drama de pasión, engaño, amor filial y venganza que tiene como protagonista a un bufón jorobado.',
-    image: images.event7,
   },
 ];
 
