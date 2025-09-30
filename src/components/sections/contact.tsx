@@ -45,7 +45,7 @@ export default function ContactSection() {
       name: "",
       email: "",
       phone: "",
-      message: "Me gustaría solicitar una presentación privada sobre sus paquetes de reserva de ópera.",
+      message: "Me gustaría solicitar información sobre sus clases y/o presentaciones.",
     },
   });
 
@@ -75,9 +75,9 @@ export default function ContactSection() {
       <div className="container max-w-screen-2xl px-4">
         <FadeIn>
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="font-headline text-3xl font-bold tracking-tight text-gold-gradient sm:text-4xl">Solicitar una Presentación Privada</h2>
+            <h2 className="font-headline text-3xl font-bold tracking-tight text-gold-gradient sm:text-4xl">Contactos para clases y/o presentaciones</h2>
             <p className="mt-4 text-lg text-muted-foreground">
-              Completa el formulario a continuación o contáctanos por WhatsApp para programar una presentación.
+              Completa el formulario a continuación o contáctanos por WhatsApp para programar una clase o presentación.
             </p>
           </div>
         </FadeIn>
