@@ -25,7 +25,7 @@ const emailPrompt = ai.definePrompt({
   name: 'contactEmailPrompt',
   input: { schema: ContactFormInputSchema },
   prompt: `
-    You are a helpful assistant. A user has submitted a contact form on the Quito Lírica Ópera show website.
+    You are a helpful assistant. A user has submitted a contact form on the Quito Lírica Ópera Show website.
     Generate a professional and friendly email body to be sent to the site owner.
     The email should be from the user, containing their message.
 
@@ -53,7 +53,7 @@ const contactFlow = ai.defineFlow(
     console.log('Simulating sending email:');
     console.log('To: jotakutsuki@gmail.com');
     console.log(`From: ${input.name} <${input.email}>`);
-    console.log('Subject: Nueva solicitud de presentación de Quito Lírica Ópera show');
+    console.log('Subject: Nueva solicitud de presentación de Quito Lírica Ópera Show');
     console.log('Body:', emailBody);
     
     // In a real application, you would use a service like Nodemailer, Resend, or SendGrid

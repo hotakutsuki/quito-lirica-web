@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="flex flex-col items-start gap-4 md:col-span-1">
           <Link href="/" className="flex items-center gap-2">
             <Music2 className="h-8 w-8 text-primary" />
-            <span className="font-headline text-2xl font-bold text-gold-gradient">Quito Lírica Ópera show</span>
+            <span className="font-headline text-2xl font-bold text-gold-gradient">Quito Lírica Ópera Show</span>
           </Link>
           <p className="text-muted-foreground">Tu pase exclusivo a las mejores presentaciones de ópera del mundo.</p>
         </div>
@@ -48,7 +48,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="container mt-8 max-w-screen-2xl border-t border-border/40 pt-8 text-center text-sm text-muted-foreground">
-        <p>&copy; {new Date().getFullYear()} Quito Lírica Ópera show. Todos los derechos reservados.</p>
+        <p>&copy; {new Date().getFullYear()} Quito Lírica Ópera Show. Todos los derechos reservados.</p>
       </div>
     </footer>
   );

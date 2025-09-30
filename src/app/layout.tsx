@@ -3,7 +3,7 @@ import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
 
 export const metadata: Metadata = {
-  title: 'Quito Lírica Ópera show',
+  title: 'Quito Lírica Ópera Show',
   description: 'Una sofisticada página de destino para un negocio de reservas de ópera.',
 };
 
