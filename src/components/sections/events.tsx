@@ -7,7 +7,7 @@ import {
   CardContent,
 } from '@/components/ui/card';
 import { images, audios } from '@/lib/images';
-import { Ticket, Play, Youtube, Pause } from 'lucide-react';
+import { Ticket, Play, Youtube, Pause, LoaderCircle } from 'lucide-react';
 import { FadeIn } from '@/components/animations/fade-in';
 import {
   Carousel,
@@ -68,6 +68,7 @@ const events = [
 
 export default function EventsSection() {
   const [playingAudio, setPlayingAudio] = React.useState<string | null>(null);
+  const [loadingAudio, setLoadingAudio] = React.useState<string | null>(null);
   const audioRef = React.useRef<HTMLAudioElement | null>(null);
 
   const toggleAudio = (audioSrc: string) => {
@@ -78,11 +79,24 @@ export default function EventsSection() {
       if (audioRef.current) {
         audioRef.current.pause();
       }
+      
+      setLoadingAudio(audioSrc);
+      setPlayingAudio(null);
+
       const newAudio = new Audio(audioSrc);
       audioRef.current = newAudio;
-      newAudio.play();
-      setPlayingAudio(audioSrc);
-      newAudio.onended = () => setPlayingAudio(null);
+      
+      newAudio.oncanplay = () => {
+        newAudio.play();
+        setLoadingAudio(null);
+        setPlayingAudio(audioSrc);
+      };
+
+      newAudio.onended = () => {
+        setPlayingAudio(null);
+      };
+      
+      newAudio.load();
     }
   };
 
@@ -153,8 +167,15 @@ export default function EventsSection() {
                         size="icon"
                         onClick={() => toggleAudio(event.audioSrc)}
                         aria-label={playingAudio === event.audioSrc ? 'Pausar audio' : 'Reproducir audio'}
+                        disabled={loadingAudio === event.audioSrc}
                       >
-                        {playingAudio === event.audioSrc ? <Pause className="h-5 w-5" /> : <Play className="h-5 w-5" />}
+                        {loadingAudio === event.audioSrc ? (
+                          <LoaderCircle className="h-5 w-5 animate-spin" />
+                        ) : playingAudio === event.audioSrc ? (
+                          <Pause className="h-5 w-5" />
+                        ) : (
+                          <Play className="h-5 w-5" />
+                        )}
                       </Button>
                       <Button asChild variant="outline" size="icon">
                         <Link href={event.youtubeUrl} target="_blank" rel="noopener noreferrer" aria-label="Ver video en YouTube">

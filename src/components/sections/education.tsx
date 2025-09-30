@@ -7,7 +7,7 @@ import {
   CardContent,
 } from '@/components/ui/card';
 import { images, audios } from '@/lib/images';
-import { BookOpen, Play, Pause } from 'lucide-react';
+import { BookOpen, Play, Pause, LoaderCircle } from 'lucide-react';
 import { FadeIn } from '@/components/animations/fade-in';
 import {
   Carousel,
@@ -22,6 +22,7 @@ import { Button } from '@/components/ui/button';
 
 export default function EducationSection() {
   const [playingAudio, setPlayingAudio] = React.useState<string | null>(null);
+  const [loadingAudio, setLoadingAudio] = React.useState<string | null>(null);
   const audioRef = React.useRef<HTMLAudioElement | null>(null);
 
   const toggleAudio = (audioSrc: string) => {
@@ -32,11 +33,24 @@ export default function EducationSection() {
       if (audioRef.current) {
         audioRef.current.pause();
       }
+      
+      setLoadingAudio(audioSrc);
+      setPlayingAudio(null);
+
       const newAudio = new Audio(audioSrc);
       audioRef.current = newAudio;
-      newAudio.play();
-      setPlayingAudio(audioSrc);
-      newAudio.onended = () => setPlayingAudio(null);
+      
+      newAudio.oncanplay = () => {
+        newAudio.play();
+        setLoadingAudio(null);
+        setPlayingAudio(audioSrc);
+      };
+
+      newAudio.onended = () => {
+        setPlayingAudio(null);
+      };
+
+      newAudio.load();
     }
   };
 
@@ -122,8 +136,15 @@ export default function EducationSection() {
                           size="icon"
                           onClick={() => toggleAudio(educationAudio)}
                           aria-label={playingAudio === educationAudio ? 'Pausar audio' : 'Reproducir audio'}
+                          disabled={loadingAudio === educationAudio}
                         >
-                          {playingAudio === educationAudio ? <Pause className="h-5 w-5" /> : <Play className="h-5 w-5" />}
+                          {loadingAudio === educationAudio ? (
+                            <LoaderCircle className="h-5 w-5 animate-spin" />
+                          ) : playingAudio === educationAudio ? (
+                            <Pause className="h-5 w-5" />
+                          ) : (
+                            <Play className="h-5 w-5" />
+                          )}
                         </Button>
                     </CardContent>
                 </Card>
