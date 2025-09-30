@@ -72,7 +72,8 @@ export default function EventsSection() {
                   plugins={[
                     Autoplay({
                       delay: 5000,
-                      stopOnInteraction: true,
+                      stopOnInteraction: false,
+                      stopOnMouseEnter: true,
                     }),
                   ]}
                   opts={{
