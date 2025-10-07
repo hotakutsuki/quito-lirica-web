@@ -23,7 +23,7 @@ export default function Home() {
               src={bannerImage.src}
               alt={bannerImage.alt}
               fill
-              className="object-cover"
+              className="object-cover object-top"
               priority
               data-ai-hint={bannerImage.hint}
             />
@@ -33,8 +33,8 @@ export default function Home() {
         <EventsSection />
         <EducationSection />
         <AboutSection />
-        <NewsletterSection />
         <ContactSection />
+        <NewsletterSection />
       </main>
       <Footer />
     </div>
