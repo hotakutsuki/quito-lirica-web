@@ -101,7 +101,7 @@ export default function EducationSection() {
                     <Carousel
                       plugins={[
                         Autoplay({
-                          delay: 5000,
+                          delay: 10000,
                           stopOnInteraction: false,
                           stopOnMouseEnter: true,
                         }),
