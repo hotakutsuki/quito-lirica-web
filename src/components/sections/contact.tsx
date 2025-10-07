@@ -75,9 +75,9 @@ export default function ContactSection() {
       <div className="container max-w-screen-2xl px-4">
         <FadeIn>
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="font-headline text-3xl font-bold tracking-tight text-gold-gradient sm:text-4xl">Contactos para clases y/o presentaciones</h2>
+            <h2 className="font-headline text-3xl font-bold tracking-tight text-gold-gradient sm:text-4xl">Contáctanos para tu evento</h2>
             <p className="mt-4 text-lg text-muted-foreground">
-              Completa el formulario a continuación o contáctanos por WhatsApp para programar una clase o presentación.
+              Completa el formulario a continuación o contáctanos por WhatsApp para obtener más información.
             </p>
           </div>
         </FadeIn>
