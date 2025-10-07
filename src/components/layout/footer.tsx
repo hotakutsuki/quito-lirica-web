@@ -14,18 +14,14 @@ export default function Footer() {
           <p className="text-muted-foreground">Entretenimiento de alto nivel artístico para tu evento especial.</p>
         </div>
         <div className="flex flex-col gap-2">
-          <h3 className="font-headline text-lg font-semibold text-primary">Contacto Directo</h3>
-          <p className="flex items-center gap-2 text-muted-foreground">
-            <Phone className="h-4 w-4 text-primary" />
-            <span>Abigail Rosero: 0984 356 792</span>
-          </p>
+          <h3 className="font-headline text-lg font-semibold text-primary">Contacto</h3>
           <p className="flex items-center gap-2 text-muted-foreground">
             <Phone className="h-4 w-4 text-primary" />
             <span>Juan Carlos Arellano: 0999 864 113</span>
           </p>
           <p className="flex items-center gap-2 text-muted-foreground">
             <Mail className="h-4 w-4 text-primary" />
-            <a href="mailto:abi.soprano1@gmail.com" className="hover:text-primary">abi.soprano1@gmail.com</a>
+            <a href="mailto:quitolirica.info@gmail.com" className="hover:text-primary">quitolirica.info@gmail.com</a>
           </p>
         </div>
         <div className="flex flex-col gap-2">

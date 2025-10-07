@@ -56,7 +56,7 @@ const contactFlow = ai.defineFlow(
     const { output: emailBody } = await emailPrompt(input);
 
     console.log('Simulating sending email:');
-    console.log('To: jotakutsuki@gmail.com');
+    console.log('To: quitolirica.info@gmail.com');
     console.log(`From: ${input.name} <${input.email}>`);
     console.log('Subject: Nueva solicitud de presentación de Quito Lírica Ópera Show');
     console.log('Body:', emailBody);
