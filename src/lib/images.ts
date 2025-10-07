@@ -84,6 +84,7 @@ import recursos2 from '@/assets/RecursosEducativos/1 (2).jpg';
 import recursos3 from '@/assets/RecursosEducativos/1 (3).jpg';
 import recursos4 from '@/assets/RecursosEducativos/1 (4).jpg';
 import recursos5 from '@/assets/RecursosEducativos/1 (5).jpg';
+import recursos6 from '@/assets/RecursosEducativos/1 (6).jpg';
 
 
 // Audios
@@ -177,6 +178,7 @@ const recursosEducativosImages = [
     { src: recursos3, alt: 'Ensayo de coro 3', hint: 'coro ensayo' },
     { src: recursos4, alt: 'Clase de piano 4', hint: 'clase piano' },
     { src: recursos5, alt: 'Presentación escolar 5', hint: 'concierto escuela' },
+    { src: recursos6, alt: 'Grupo de estudiantes de música 6', hint: 'grupo musical' },
 ];
 
 

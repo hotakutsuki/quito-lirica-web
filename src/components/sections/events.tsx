@@ -144,7 +144,7 @@ export default function EventsSection() {
                             src={img.src}
                             alt={img.alt}
                             fill
-                            className="object-cover"
+                            className="object-cover object-top"
                             data-ai-hint={img.hint}
                             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                           />

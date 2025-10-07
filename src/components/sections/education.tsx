@@ -138,7 +138,7 @@ export default function EducationSection() {
                                 src={img.src}
                                 alt={img.alt}
                                 fill
-                                className="object-cover"
+                                className="object-cover object-top"
                                 data-ai-hint={img.hint}
                                 sizes="(max-width: 768px) 100vw, 60vw"
                               />
