@@ -66,8 +66,8 @@ export default function ContactSection() {
     }
   }
   
-  const whatsappLinkAbigail = "https://wa.me/593984356792";
-  const qrCodeUrlAbigail = `https://api.qrserver.com/v1/create-qr-code/?size=128x128&data=${encodeURIComponent(whatsappLinkAbigail)}&color=D4AF37&bgcolor=191970&qzone=1`;
+  const whatsappLinkJuanCarlos = "https://wa.me/593999864113";
+  const qrCodeUrlJuanCarlos = `https://api.qrserver.com/v1/create-qr-code/?size=128x128&data=${encodeURIComponent(whatsappLinkJuanCarlos)}&color=D4AF37&bgcolor=191970&qzone=1`;
 
 
   return (
@@ -157,26 +157,24 @@ export default function ContactSection() {
                 <CardHeader className="text-center">
                   <CardTitle className="text-2xl font-headline text-gold-gradient">Reservar por WhatsApp</CardTitle>
                   <CardDescription>
-                    Escanea el código QR para contactarnos.
+                    Escanea el código QR para contactar a Juan Carlos Arellano.
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="flex flex-col items-center justify-center gap-6">
-                  <div className="flex flex-row gap-4 justify-center">
-                    <div className="flex flex-col items-center gap-2">
-                      <div className="rounded-lg border-2 border-primary bg-background p-2">
-                        <Image 
-                          src={qrCodeUrlAbigail}
-                          alt="Código QR de WhatsApp para Abigail Rosero"
-                          width={128}
-                          height={128}
-                        />
-                      </div>
-                      <Button asChild variant="outline" size="sm" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-                        <a href={whatsappLinkAbigail} target="_blank" rel="noopener noreferrer">
-                          Abrir WhatsApp
-                        </a>
-                      </Button>
+                  <div className="flex flex-col items-center gap-2">
+                    <div className="rounded-lg border-2 border-primary bg-background p-2">
+                      <Image 
+                        src={qrCodeUrlJuanCarlos}
+                        alt="Código QR de WhatsApp para Juan Carlos Arellano"
+                        width={128}
+                        height={128}
+                      />
                     </div>
+                    <Button asChild variant="outline" size="sm" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+                      <a href={whatsappLinkJuanCarlos} target="_blank" rel="noopener noreferrer">
+                        Abrir WhatsApp
+                      </a>
+                    </Button>
                   </div>
                 </CardContent>
               </Card>
