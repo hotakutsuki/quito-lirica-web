@@ -37,8 +37,10 @@ import showDeOpera5 from '@/assets/ShowDeOpera/1 (5).jpg';
 import showDeOpera6 from '@/assets/ShowDeOpera/1 (6).jpg';
 import showDeOpera7 from '@/assets/ShowDeOpera/1 (7).jpg';
 import showDeOpera8 from '@/assets/ShowDeOpera/1 (8).jpg';
+import showDeOpera9 from '@/assets/ShowDeOpera/1 (9).jpg';
 import showDeOpera10 from '@/assets/ShowDeOpera/1 (10).jpg';
 import showDeOpera11 from '@/assets/ShowDeOpera/1 (11).jpg';
+import showDeOpera12 from '@/assets/ShowDeOpera/1 (12).jpg';
 
 
 // Conciertos y Montajes en vivo
@@ -128,8 +130,10 @@ const showDeOperaImages = [
   { src: showDeOpera6, alt: 'Cena y show de ópera 6', hint: 'audiencia concierto' },
   { src: showDeOpera7, alt: 'Cena y show de ópera 7', hint: 'audiencia concierto' },
   { src: showDeOpera8, alt: 'Cena y show de ópera 8', hint: 'audiencia concierto' },
+  { src: showDeOpera9, alt: 'Cena y show de ópera 9', hint: 'audiencia concierto' },
   { src: showDeOpera10, alt: 'Cena y show de ópera 10', hint: 'audiencia concierto' },
   { src: showDeOpera11, alt: 'Cena y show de ópera 11', hint: 'audiencia concierto' },
+  { src: showDeOpera12, alt: 'Cena y show de ópera 12', hint: 'audiencia concierto' },
 ];
 
 const conciertosImages = [
