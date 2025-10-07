@@ -7,7 +7,7 @@ import {
   CardContent,
 } from '@/components/ui/card';
 import { images, audios } from '@/lib/images';
-import { BookOpen, Play, Pause, LoaderCircle } from 'lucide-react';
+import { BookOpen, Play, Pause, LoaderCircle, MessageCircle } from 'lucide-react';
 import { FadeIn } from '@/components/animations/fade-in';
 import {
   Carousel,
@@ -19,6 +19,7 @@ import {
 import Autoplay from "embla-carousel-autoplay";
 import * as React from 'react';
 import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 export default function EducationSection() {
   const [playingAudio, setPlayingAudio] = React.useState<string | null>(null);
@@ -64,6 +65,7 @@ export default function EducationSection() {
 
   const educationImages = images.educationCarousel;
   const educationAudio = audios.recursosEducativos;
+  const whatsappLinkAbigail = "https://wa.me/593984356792";
 
   return (
     <section id="education" className="bg-transparent py-20 sm:py-32">
@@ -72,7 +74,7 @@ export default function EducationSection() {
           <div className="mx-auto max-w-4xl text-center">
             <h2 className="font-headline text-3xl font-bold tracking-tight text-gold-gradient sm:text-4xl">Recursos Educativos</h2>
             <p className="mt-4 text-lg text-muted-foreground">
-              Nútrete de la experiencia y conocimiento de nuestros artistas en clases maestras, vocal coaching, clases de piano, y canto coral.
+              Descubre nuestros programas educativos y artísticos.
             </p>
           </div>
         </FadeIn>
@@ -80,6 +82,18 @@ export default function EducationSection() {
         <div className="mt-16 grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
             <FadeIn className="lg:col-span-2">
                 <div className="space-y-6 text-lg text-foreground/80">
+                    <div className="flex items-start gap-4">
+                        <BookOpen className="h-8 w-8 text-primary flex-shrink-0 mt-1" />
+                        <div>
+                            <p className="text-muted-foreground">Nútrete de la experiencia y conocimiento de nuestros artistas y solicita tus clases de Vocal coaching, belting, piano o canto coral.</p>
+                            <Button asChild size="sm" className="mt-2 bg-green-600 hover:bg-green-700 text-white">
+                              <a href={whatsappLinkAbigail} target="_blank" rel="noopener noreferrer">
+                                <MessageCircle className="mr-2 h-4 w-4" />
+                                Contactar por WhatsApp
+                              </a>
+                            </Button>
+                        </div>
+                    </div>
                     <div className="flex items-start gap-4">
                         <BookOpen className="h-8 w-8 text-primary flex-shrink-0 mt-1" />
                         <div>
@@ -92,6 +106,11 @@ export default function EducationSection() {
                         <div>
                             <h3 className="font-semibold text-foreground">Montajes de Teatro Musical</h3>
                             <p className="text-muted-foreground">Montaremos un musical pensado para diferentes grupos de edad.</p>
+                            <Button asChild size="sm" variant="outline" className="mt-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+                              <a href={whatsappLinkAbigail} target="_blank" rel="noopener noreferrer">
+                                Quiero montar un Musical en mi escuela o colegio
+                              </a>
+                            </Button>
                         </div>
                     </div>
                 </div>
