@@ -23,9 +23,6 @@ import operaBrass3 from '@/assets/OperaBrass/1 (3).jpg';
 import operaBrass4 from '@/assets/OperaBrass/1 (4).jpg';
 import operaBrass5 from '@/assets/OperaBrass/1 (5).jpg';
 import operaBrass6 from '@/assets/OperaBrass/1 (6).jpg';
-import operaBrass7 from '@/assets/OperaBrass/1 (7).jpg';
-import operaBrass8 from '@/assets/OperaBrass/1 (8).jpg';
-import operaBrass9 from '@/assets/OperaBrass/1 (9).jpg';
 
 
 // Show de Opera
@@ -116,9 +113,6 @@ const operaBrassImages = [
   { src: operaBrass4, alt: 'Músicos de Opera Brass 4', hint: 'instrumentos viento' },
   { src: operaBrass5, alt: 'Músicos de Opera Brass 5', hint: 'instrumentos viento' },
   { src: operaBrass6, alt: 'Músicos de Opera Brass 6', hint: 'instrumentos viento' },
-  { src: operaBrass7, alt: 'Músicos de Opera Brass 7', hint: 'instrumentos viento' },
-  { src: operaBrass8, alt: 'Músicos de Opera Brass 8', hint: 'instrumentos viento' },
-  { src: operaBrass9, alt: 'Músicos de Opera Brass 9', hint: 'instrumentos viento' },
 ];
 
 const showDeOperaImages = [
