@@ -36,11 +36,6 @@ export default function AboutSection() {
                 <CollapsibleContent>
                   <p className="mt-4 text-lg text-foreground/80 whitespace-pre-line">
                     Posteriormente, el proyecto evoluciona y se integran varios músicos, bailarines y directores escénicos, consolidándose como compañía lírica independiente. Realiza montajes de escenas de óperas y zarzuelas y organiza sendos conciertos en diferentes teatros y salas de conciertos del Ecuador, sin dejar de lado su esencia de llevar la lírica a todas partes que fuera su razón de ser. Su labor de divulgación de la lírica ha permitido que el público se nutra de nuevo repertorio y que escuche interpretaciones de altísima calidad y profesionalismo. Actualmente configuran la lírica con repertorio popular y llegan a un público muy variado. Las propuestas, innovadoras y diferente procuran cumplir el derecho al acceso a expresiones culturales diversas.
-                    
-                    Formatos de Espectáculo:
-                    - Show de Ópera al estilo Carnaval Veneciano: Los cantantes utilizan vestuario de época, antifaces o trajes de gala. El show consiste de una pequeña introducción de cada canción, la cual es ejecutada alrededor de las mesas donde se encuentran los asistentes. De este modo, la audiencia aprecia a los artistas a poca distancia y se vuelven parte del show.
-                    - Flashmob y Ópera Secreta: Los cantantes visten uniformes de meseros, chef, hostess, etc., y ejecutan las canciones artista tras artista para sorprender a la audiencia que no sabían sobre el show. Este formato tiene un enorme impacto, especialmente cuando se trata de reforzar una marca, o un producto.
-                    - Concierto: El vestuario es formal y la interpretación es realizada en un escenario de manera estática. Este formato es ideal para seminarios, congresos o ceremonias donde se espera que la audiencia escuche en silencio.
                   </p>
                 </CollapsibleContent>
                 <CollapsibleTrigger asChild>
