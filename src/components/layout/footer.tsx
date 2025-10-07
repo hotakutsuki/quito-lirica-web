@@ -1,3 +1,4 @@
+
 import { Facebook, Instagram, Mail, Mic, Phone, Youtube, Music2 } from 'lucide-react';
 import Link from 'next/link';
 
@@ -10,7 +11,7 @@ export default function Footer() {
             <Music2 className="h-8 w-8 text-primary" />
             <span className="font-headline text-2xl font-bold text-gold-gradient">Quito Lírica Ópera Show</span>
           </Link>
-          <p className="text-muted-foreground">Tu pase exclusivo a las mejores presentaciones de ópera del mundo.</p>
+          <p className="text-muted-foreground">Entretenimiento de alto nivel artístico para tu evento especial.</p>
         </div>
         <div className="flex flex-col gap-2">
           <h3 className="font-headline text-lg font-semibold text-primary">Contacto Directo</h3>
