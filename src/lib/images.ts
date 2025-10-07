@@ -53,6 +53,8 @@ import conciertos9 from '@/assets/ConciertosYMontajesEnVivo/1 (9).jpg';
 import conciertos10 from '@/assets/ConciertosYMontajesEnVivo/1 (10).jpg';
 import conciertos11 from '@/assets/ConciertosYMontajesEnVivo/1 (11).jpg';
 import conciertos12 from '@/assets/ConciertosYMontajesEnVivo/1 (12).jpg';
+import conciertos13 from '@/assets/ConciertosYMontajesEnVivo/1 (13).jpg';
+import conciertos14 from '@/assets/ConciertosYMontajesEnVivo/1 (14).jpg';
 
 
 // Flashmobs y Eventos Corporativos
@@ -143,6 +145,8 @@ const conciertosImages = [
   { src: conciertos10, alt: 'Orquesta en escenario 10', hint: 'teatro auditorio' },
   { src: conciertos11, alt: 'Orquesta en escenario 11', hint: 'teatro auditorio' },
   { src: conciertos12, alt: 'Orquesta en escenario 12', hint: 'teatro auditorio' },
+  { src: conciertos13, alt: 'Orquesta en escenario 13', hint: 'teatro auditorio' },
+  { src: conciertos14, alt: 'Orquesta en escenario 14', hint: 'teatro auditorio' },
 ];
 
 const flashmobsImages = [
