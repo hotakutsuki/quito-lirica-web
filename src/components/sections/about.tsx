@@ -19,7 +19,7 @@ export default function AboutSection() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <section id="about" className="bg-transparent py-20 sm:py-32">
+    <section id="about" className="bg-transparent py-10 sm:py-16">
       <div className="container max-w-screen-2xl px-4">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
           <FadeIn>

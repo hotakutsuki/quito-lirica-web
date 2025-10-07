@@ -71,7 +71,7 @@ export default function ContactSection() {
 
 
   return (
-    <section id="contact" className="py-20 sm:py-32">
+    <section id="contact" className="py-10 sm:py-16">
       <div className="container max-w-screen-2xl px-4">
         <FadeIn>
           <div className="mx-auto max-w-2xl text-center">

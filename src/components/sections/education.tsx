@@ -68,7 +68,7 @@ export default function EducationSection() {
   const whatsappLinkAbigail = "https://wa.me/593984356792";
 
   return (
-    <section id="education" className="bg-transparent py-20 sm:py-32">
+    <section id="education" className="bg-transparent py-10 sm:py-16">
       <div className="container max-w-screen-2xl px-4">
         <FadeIn>
           <div className="mx-auto max-w-4xl text-center">
