@@ -23,32 +23,11 @@ import Link from 'next/link';
 
 const events = [
   {
-    title: 'Gala Lírica',
-    description: 'Interpretación estilo concierto para un ambiente formal y distinguido.',
-    images: images.eventCarousel1,
-    audioSrc: audios.galaLirica,
-    youtubeUrl: 'https://youtu.be/bXf8TwC6EeA',
-  },
-  {
-    title: 'Ópera & Brass',
-    description: 'Escucha el inigualable sonido de las voces líricas y la potencia del ensamble de Brass en un concierto brillante.',
-    images: images.eventCarousel2,
-    audioSrc: audios.operaBrass,
-    youtubeUrl: 'https://youtu.be/LjbW8XCRwd8',
-  },
-  {
     title: 'Show de Ópera',
     description: 'Ópera en movimiento para la recepción o cena formal. Las voces líricas a pocos metros de distancia crearán una experiencia envolvente e impactante.',
     images: images.eventCarousel3,
     audioSrc: audios.showDeOpera,
     youtubeUrl: 'https://youtube.com/shorts/URjJz3TS_qw?feature=share',
-  },
-  {
-    title: 'Conciertos y Montajes en vivo',
-    description: 'Disfruta de conciertos y montajes con músicos en vivo en nuestras temporadas artísticas del más alto nivel.',
-    images: images.eventCarousel4,
-    audioSrc: audios.conciertos,
-    youtubeUrl: 'https://youtu.be/2Rw3RZ3vdHY',
   },
   {
     title: 'Flashmobs y Eventos Corporativos',
@@ -63,6 +42,27 @@ const events = [
     images: images.eventCarousel6,
     audioSrc: audios.ceremonias,
     youtubeUrl: 'https://youtube.com/shorts/zVv2I3DQWPM',
+  },
+  {
+    title: 'Gala Lírica',
+    description: 'Interpretación estilo concierto para un ambiente formal y distinguido.',
+    images: images.eventCarousel1,
+    audioSrc: audios.galaLirica,
+    youtubeUrl: 'https://youtu.be/bXf8TwC6EeA',
+  },
+  {
+    title: 'Ópera & Brass',
+    description: 'Escucha el inigualable sonido de las voces líricas y la potencia del ensamble de Brass en un concierto brillante.',
+    images: images.eventCarousel2,
+    audioSrc: audios.operaBrass,
+    youtubeUrl: 'https://youtu.be/LjbW8XCRwd8',
+  },
+  {
+    title: 'Conciertos y Montajes en vivo',
+    description: 'Disfruta de conciertos y montajes con músicos en vivo en nuestras temporadas artísticas del más alto nivel.',
+    images: images.eventCarousel4,
+    audioSrc: audios.conciertos,
+    youtubeUrl: 'https://youtu.be/2Rw3RZ3vdHY',
   },
 ];
 
