@@ -138,7 +138,7 @@ export default function EducationSection() {
                                 src={img.src}
                                 alt={img.alt}
                                 fill
-                                className="object-cover object-top"
+                                className="object-cover"
                                 data-ai-hint={img.hint}
                                 sizes="(max-width: 768px) 100vw, 60vw"
                               />
@@ -153,13 +153,13 @@ export default function EducationSection() {
                         <Button
                           variant="outline"
                           size="icon"
-                          onClick={() => toggleAudio(educationAudio)}
-                          aria-label={playingAudio === educationAudio ? 'Pausar audio' : 'Reproducir audio'}
-                          disabled={loadingAudio === educationAudio}
+                          onClick={() => toggleAudio(audios.recursosEducativos)}
+                          aria-label={playingAudio === audios.recursosEducativos ? 'Pausar audio' : 'Reproducir audio'}
+                          disabled={loadingAudio === audios.recursosEducativos}
                         >
-                          {loadingAudio === educationAudio ? (
+                          {loadingAudio === audios.recursosEducativos ? (
                             <LoaderCircle className="h-5 w-5 animate-spin" />
-                          ) : playingAudio === educationAudio ? (
+                          ) : playingAudio === audios.recursosEducativos ? (
                             <Pause className="h-5 w-5" />
                           ) : (
                             <Play className="h-5 w-5" />
