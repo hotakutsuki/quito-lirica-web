@@ -26,21 +26,21 @@ export default function Footer() {
         </div>
         <div className="flex flex-col gap-2">
           <h3 className="font-headline text-lg font-semibold text-primary">Redes Sociales</h3>
-          <a href="https://www.facebook.com/quitolirica/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-muted-foreground hover:text-primary">
+          <a href="https://www.facebook.com/share/1CgfVAJSZQ/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-muted-foreground hover:text-primary">
             <Facebook className="h-4 w-4 text-primary" />
             <span>@quitolirica</span>
           </a>
-          <a href="https://www.instagram.com/abigailrosero.soprano" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-muted-foreground hover:text-primary">
+          <a href="https://www.instagram.com/quitolirica?igsh=MW0xZ215bWdwYm55OQ==" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-muted-foreground hover:text-primary">
             <Instagram className="h-4 w-4 text-primary" />
-            <span>@abigailrosero.soprano</span>
+            <span>@quitolirica</span>
           </a>
-          <a href="#" className="flex items-center gap-2 text-muted-foreground hover:text-primary">
+          <a href="https://soundcloud.com/quito-lirica" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-muted-foreground hover:text-primary">
             <Mic className="h-4 w-4 text-primary" />
-            <span>Abigail Rosero en SoundCloud</span>
+            <span>Quito Lírica en SoundCloud</span>
           </a>
-          <a href="#" className="flex items-center gap-2 text-muted-foreground hover:text-primary">
+          <a href="https://youtube.com/@quitolirica?si=n8Z6qTbaFoQRTIZM" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-muted-foreground hover:text-primary">
             <Youtube className="h-4 w-4 text-primary" />
-            <span>Juan Carlos Arellano en YouTube</span>
+            <span>Quito Lírica en YouTube</span>
           </a>
         </div>
       </div>
