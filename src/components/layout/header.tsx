@@ -20,9 +20,9 @@ export default function Header() {
           <span className="font-headline text-xl font-bold text-gold-gradient">Quito Lírica Ópera Show</span>
         </Link>
         <nav className="hidden items-center gap-4 text-sm md:flex">
-          <Button variant="link" onClick={() => scrollTo('events')} className="text-foreground/80 hover:text-primary">Eventos</Button>
-          <Button variant="link" onClick={() => scrollTo('about')} className="text-foreground/80 hover:text-primary">Sobre Nosotros</Button>
-          <Button variant="link" onClick={() => scrollTo('contact')} className="text-foreground/80 hover:text-primary">Contacto</Button>
+          <Button variant="link" onClick={() => scrollTo('events')} className="text-foreground hover:text-primary">Eventos</Button>
+          <Button variant="link" onClick={() => scrollTo('about')} className="text-foreground hover:text-primary">Sobre Nosotros</Button>
+          <Button variant="link" onClick={() => scrollTo('contact')} className="text-foreground hover:text-primary">Contacto</Button>
         </nav>
         <Button onClick={() => scrollTo('contact')} className="hidden bg-accent hover:bg-accent/90 text-accent-foreground md:inline-flex">
           Solicitar Presentación
