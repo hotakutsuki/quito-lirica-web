@@ -157,7 +157,7 @@ export default function EventsSection() {
                 </Carousel>
                 <CardContent className="flex flex-col flex-grow p-6">
                   <div className="flex justify-between items-center mb-4">
-                    <h3 className="flex items-center gap-2 text-xl font-headline text-foreground">
+                    <h3 className="flex items-center gap-2 text-xl font-headline text-white">
                       <Ticket className="h-6 w-6 text-primary" />
                       {event.title}
                     </h3>
@@ -184,7 +184,7 @@ export default function EventsSection() {
                       </Button>
                     </div>
                   </div>
-                  <p className="text-muted-foreground flex-grow">{event.description}</p>
+                  <p className="text-white text-base flex-grow">{event.description}</p>
                 </CardContent>
               </Card>
             </FadeIn>
