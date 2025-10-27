@@ -2,15 +2,15 @@ import type { Metadata } from 'next';
 import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
 
-const siteUrl = 'https://quito-lirica.web.app'; // Reemplaza con tu dominio cuando lo tengas
+const siteUrl = 'https://quitolirica.com';
 
 export const metadata: Metadata = {
   title: {
-    default: 'Quito Lírica Ópera Show | Cantantes para Eventos en Ecuador',
+    default: 'Quito Lírica Ópera Show | Cantantes para Eventos en Quito, Ecuador',
     template: '%s | Quito Lírica Ópera Show',
   },
   description: 'Quito Lírica Ópera Show ofrece cantantes y espectáculos de ópera de alto nivel para eventos, bodas y ceremonias en Quito y todo Ecuador. ¡Haz de tu evento algo inolvidable!',
-  keywords: ['ópera', 'cantantes líricos', 'Quito', 'Ecuador', 'eventos corporativos', 'bodas', 'música para ceremonias', 'flashmob', 'entretenimiento', 'gala lírica', 'Quito Lírica'],
+  keywords: ['ópera en Quito', 'cantantes líricos Quito', 'eventos corporativos Quito', 'bodas Quito', 'música para ceremonias Ecuador', 'flashmob', 'entretenimiento para eventos', 'gala lírica', 'Quito Lírica', 'espectáculos en Quito'],
   authors: [{ name: 'Quito Lírica Ópera Show' }],
   creator: 'Quito Lírica Ópera Show',
   publisher: 'Quito Lírica Ópera Show',
@@ -21,23 +21,23 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     url: siteUrl,
-    title: 'Quito Lírica Ópera Show | Espectáculos para Eventos',
-    description: 'Shows interactivos de ópera y música lírica para eventos, bodas y galas. Calidad artística y profesionalismo en Ecuador.',
+    title: 'Quito Lírica Ópera Show | Espectáculos para Eventos en Quito',
+    description: 'Shows interactivos de ópera y música lírica para eventos, bodas y galas. Calidad artística y profesionalismo en Quito, Ecuador.',
     siteName: 'Quito Lírica Ópera Show',
     images: [
       {
         url: '/og-image.jpg', // Es importante crear esta imagen
         width: 1200,
         height: 630,
-        alt: 'Quito Lírica Ópera Show en una presentación',
+        alt: 'Quito Lírica Ópera Show en una presentación en Quito',
       },
     ],
     locale: 'es_EC',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Quito Lírica Ópera Show | Eventos Inolvidables con Música Lírica',
-    description: 'Transforma tu evento con la emoción de la ópera. Ofrecemos shows, flashmobs, música para ceremonias y más.',
+    title: 'Quito Lírica Ópera Show | Eventos Inolvidables con Música Lírica en Quito',
+    description: 'Transforma tu evento en Quito con la emoción de la ópera. Ofrecemos shows, flashmobs, música para ceremonias y más.',
     creator: '@quitolirica', // Asumiendo que este es el usuario de Twitter
     images: ['/twitter-image.jpg'], // Es importante crear esta imagen
   },
@@ -66,7 +66,7 @@ const jsonLd = {
   name: 'Quito Lírica Ópera Show',
   url: siteUrl,
   logo: `${siteUrl}/logo.png`, // Es importante crear este logo
-  description: 'Compañía lírica independiente que ofrece espectáculos de ópera y música lírica para eventos, ceremonias y galas en Ecuador.',
+  description: 'Compañía lírica independiente que ofrece espectáculos de ópera y música lírica para eventos, ceremonias y galas en Quito, Ecuador.',
   email: 'quitolirica.info@gmail.com',
   telephone: '+593999864113',
   address: {
