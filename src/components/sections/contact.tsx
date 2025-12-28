@@ -54,10 +54,11 @@ export default function ContactSection() {
       await sendContactEmail(values);
       toast({
         title: "¡Solicitud Enviada!",
-        description: "Gracias por tu interés. Nos pondremos en contacto en breve.",
+        description: "Gracias por tu interés. Nos pondremos en contacto contigo en breve.",
       });
       form.reset();
     } catch (error) {
+      console.error("Error submitting form:", error);
       toast({
         variant: "destructive",
         title: "Algo salió mal",
