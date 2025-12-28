@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
 import { FirebaseClientProvider } from '@/firebase';
+import { ClientOnly } from '@/components/client-only';
 
 const siteUrl = 'https://quitolirica.com';
 
@@ -108,10 +109,12 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;7..72,700&display=swap" rel="stylesheet" />
       </head>
       <body className="font-body antialiased">
-        <FirebaseClientProvider>
-          {children}
-          <Toaster />
-        </FirebaseClientProvider>
+        <ClientOnly>
+          <FirebaseClientProvider>
+            {children}
+            <Toaster />
+          </FirebaseClientProvider>
+        </ClientOnly>
       </body>
     </html>
   );
