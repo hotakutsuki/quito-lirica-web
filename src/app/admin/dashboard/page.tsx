@@ -1,8 +1,9 @@
+
 'use client';
 
 import AdminAuth from '@/components/auth/admin-auth';
 import { useCollection } from '@/firebase';
-import { useFirebase } from '@/firebase/provider';
+import { useFirebase, useMemoFirebase } from '@/firebase/provider';
 import { collection, query, orderBy } from 'firebase/firestore';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
@@ -15,12 +16,12 @@ import { LogOut } from 'lucide-react';
 export default function AdminDashboardPage() {
   const { firestore, auth } = useFirebase();
 
-  const presentationRequestsQuery = firestore 
-    ? query(collection(firestore, 'presentationRequests'), orderBy('requestDateTime', 'desc'))
-    : null;
+  const presentationRequestsQuery = useMemoFirebase(() => 
+    firestore 
+      ? query(collection(firestore, 'presentationRequests'), orderBy('requestDateTime', 'desc'))
+      : null
+  , [firestore]);
 
-  // IMPORTANT: The query is memoized inside the useCollection hook.
-  // For more complex queries that depend on component state/props, you should use useMemoFirebase.
   const { data: requests, isLoading } = useCollection(presentationRequestsQuery);
 
   const handleSignOut = async () => {
