@@ -8,15 +8,28 @@ import { collection, query, orderBy, doc } from 'firebase/firestore';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import { Badge } from '@/components/ui/badge';
-import { format } from 'date-fns';
+import { format }s from 'date-fns';
 import { es } from 'date-fns/locale';
 import { Button } from '@/components/ui/button';
 import { LogOut } from 'lucide-react';
 import { Checkbox } from '@/components/ui/checkbox';
 import { cn } from '@/lib/utils';
+import { useState, useEffect } from 'react';
+
+type RequestWithFormattedDate = {
+  id: string;
+  name: string;
+  email: string;
+  phone?: string;
+  message: string;
+  isViewed?: boolean;
+  requestDateTime: any;
+  formattedDate: string;
+};
 
 export default function AdminDashboardPage() {
   const { firestore, auth } = useFirebase();
+  const [displayRequests, setDisplayRequests] = useState<RequestWithFormattedDate[]>([]);
 
   const presentationRequestsQuery = useMemoFirebase(() => 
     firestore 
@@ -29,6 +42,20 @@ export default function AdminDashboardPage() {
   , [firestore]);
 
   const { data: requests, isLoading } = useCollection(presentationRequestsQuery);
+
+  useEffect(() => {
+    if (requests) {
+      // Format dates on the client-side to avoid hydration mismatch
+      const formatted = requests.map(req => ({
+        ...req,
+        formattedDate: req.requestDateTime?.toDate 
+          ? format(req.requestDateTime.toDate(), "d MMM yyyy, HH:mm", { locale: es })
+          : "Fecha no disponible"
+      }));
+      setDisplayRequests(formatted);
+    }
+  }, [requests]);
+
 
   const handleSignOut = async () => {
     if (auth) {
@@ -58,7 +85,7 @@ export default function AdminDashboardPage() {
           </CardHeader>
           <CardContent>
             {isLoading && <p className="text-center text-muted-foreground">Cargando solicitudes...</p>}
-            {!isLoading && requests && (
+            {!isLoading && displayRequests && (
               <div className="overflow-x-auto">
                 <Table>
                   <TableHeader>
@@ -72,7 +99,7 @@ export default function AdminDashboardPage() {
                     </TableRow>
                   </TableHeader>
                   <TableBody>
-                    {requests.map((req) => (
+                    {displayRequests.map((req) => (
                       <TableRow 
                         key={req.id}
                         className={cn(req.isViewed && 'bg-muted/30 text-muted-foreground')}
@@ -85,12 +112,10 @@ export default function AdminDashboardPage() {
                           />
                         </TableCell>
                         <TableCell>
-                          {req.requestDateTime?.toDate ? (
-                            <span className="whitespace-nowrap">
-                              {format(req.requestDateTime.toDate(), "d MMM yyyy, HH:mm", { locale: es })}
-                            </span>
+                          {req.formattedDate !== "Fecha no disponible" ? (
+                            <span className="whitespace-nowrap">{req.formattedDate}</span>
                           ) : (
-                            <Badge variant="secondary">Fecha no disponible</Badge>
+                             <Badge variant="secondary">{req.formattedDate}</Badge>
                           )}
                         </TableCell>
                         <TableCell className={cn('font-medium', !req.isViewed && 'text-foreground')}>{req.name}</TableCell>
@@ -103,7 +128,7 @@ export default function AdminDashboardPage() {
                 </Table>
               </div>
             )}
-             {!isLoading && (!requests || requests.length === 0) && (
+             {!isLoading && (!displayRequests || displayRequests.length === 0) && (
                 <p className="text-center text-muted-foreground py-10">No hay solicitudes por el momento.</p>
              )}
           </CardContent>
