@@ -22,7 +22,7 @@ type RequestWithFormattedDate = {
   email: string;
   phone?: string;
   message: string;
-  isViewed?: boolean;
+  isViewed: boolean;
   requestDateTime: any;
   formattedDate: string;
 };
@@ -48,6 +48,7 @@ export default function AdminDashboardPage() {
       // Format dates on the client-side to avoid hydration mismatch
       const formatted = requests.map(req => ({
         ...req,
+        isViewed: !!req.isViewed, // Ensure isViewed is always a boolean
         formattedDate: req.requestDateTime?.toDate 
           ? format(req.requestDateTime.toDate(), "d MMM yyyy, HH:mm", { locale: es })
           : "Fecha no disponible"
@@ -66,6 +67,7 @@ export default function AdminDashboardPage() {
   const handleViewedChange = (id: string, currentStatus: boolean) => {
     if (!firestore) return;
     const requestDocRef = doc(firestore, 'presentationRequests', id);
+    // Use the non-blocking update function and ensure the value is a boolean
     updateDocumentNonBlocking(requestDocRef, { isViewed: !currentStatus });
   };
 
@@ -106,8 +108,8 @@ export default function AdminDashboardPage() {
                       >
                         <TableCell>
                           <Checkbox
-                            checked={!!req.isViewed}
-                            onCheckedChange={() => handleViewedChange(req.id, !!req.isViewed)}
+                            checked={req.isViewed}
+                            onCheckedChange={() => handleViewedChange(req.id, req.isViewed)}
                             aria-label="Marcar como visto"
                           />
                         </TableCell>
