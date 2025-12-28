@@ -22,13 +22,17 @@
           "type": "string",
           "description": "The timestamp when the request was submitted.",
           "format": "date-time"
+        },
+        "isViewed": {
+          "type": "boolean",
+          "description": "Whether the admin has viewed the request."
         }
       },
       "required": ["name", "email", "message", "requestDateTime"]
     }
   },
   "auth": {
-    "providers": []
+    "providers": ["password"]
   },
   "firestore": {
     "/presentationRequests/{presentationRequestId}": {
