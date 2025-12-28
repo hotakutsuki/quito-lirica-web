@@ -28,9 +28,7 @@
     }
   },
   "auth": {
-    "providers": [
-      "anonymous"
-    ]
+    "providers": []
   },
   "firestore": {
     "/presentationRequests/{presentationRequestId}": {
