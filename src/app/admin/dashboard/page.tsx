@@ -1,10 +1,9 @@
-
 'use client';
 
 import AdminAuth from '@/components/auth/admin-auth';
-import { useCollection, updateDocumentNonBlocking } from '@/firebase';
+import { useCollection } from '@/firebase';
 import { useFirebase, useMemoFirebase } from '@/firebase/provider';
-import { collection, query, orderBy, doc } from 'firebase/firestore';
+import { collection, query, orderBy } from 'firebase/firestore';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import { Badge } from '@/components/ui/badge';
@@ -12,7 +11,6 @@ import { format } from 'date-fns';
 import { es } from 'date-fns/locale';
 import { Button } from '@/components/ui/button';
 import { LogOut } from 'lucide-react';
-import { Checkbox } from '@/components/ui/checkbox';
 import { cn } from '@/lib/utils';
 import { useState, useEffect } from 'react';
 
@@ -22,7 +20,6 @@ type RequestWithFormattedDate = {
   email: string;
   phone?: string;
   message: string;
-  isViewed: boolean;
   requestDateTime: any;
   formattedDate: string;
 };
@@ -35,7 +32,6 @@ export default function AdminDashboardPage() {
     firestore 
       ? query(
           collection(firestore, 'presentationRequests'), 
-          orderBy('isViewed', 'asc'),
           orderBy('requestDateTime', 'desc')
         )
       : null
@@ -48,7 +44,6 @@ export default function AdminDashboardPage() {
       // Format dates on the client-side to avoid hydration mismatch
       const formatted = requests.map(req => ({
         ...req,
-        isViewed: !!req.isViewed, // Ensure isViewed is always a boolean
         formattedDate: req.requestDateTime?.toDate 
           ? format(req.requestDateTime.toDate(), "d MMM yyyy, HH:mm", { locale: es })
           : "Fecha no disponible"
@@ -62,13 +57,6 @@ export default function AdminDashboardPage() {
     if (auth) {
       await auth.signOut();
     }
-  };
-
-  const handleViewedChange = (id: string, currentStatus: boolean) => {
-    if (!firestore) return;
-    const requestDocRef = doc(firestore, 'presentationRequests', id);
-    // Use the non-blocking update function and ensure the value is a boolean
-    updateDocumentNonBlocking(requestDocRef, { isViewed: !currentStatus });
   };
 
   return (
@@ -92,7 +80,6 @@ export default function AdminDashboardPage() {
                 <Table>
                   <TableHeader>
                     <TableRow>
-                      <TableHead className="w-[50px]">Visto</TableHead>
                       <TableHead>Fecha</TableHead>
                       <TableHead>Nombre</TableHead>
                       <TableHead>Email</TableHead>
@@ -104,15 +91,7 @@ export default function AdminDashboardPage() {
                     {displayRequests.map((req) => (
                       <TableRow 
                         key={req.id}
-                        className={cn(req.isViewed && 'bg-muted/30 text-muted-foreground')}
                       >
-                        <TableCell>
-                          <Checkbox
-                            checked={req.isViewed}
-                            onCheckedChange={() => handleViewedChange(req.id, req.isViewed)}
-                            aria-label="Marcar como visto"
-                          />
-                        </TableCell>
                         <TableCell>
                           {req.formattedDate !== "Fecha no disponible" ? (
                             <span className="whitespace-nowrap">{req.formattedDate}</span>
@@ -120,10 +99,10 @@ export default function AdminDashboardPage() {
                              <Badge variant="secondary">{req.formattedDate}</Badge>
                           )}
                         </TableCell>
-                        <TableCell className={cn('font-medium', !req.isViewed && 'text-foreground')}>{req.name}</TableCell>
+                        <TableCell className='font-medium text-foreground'>{req.name}</TableCell>
                         <TableCell><a href={`mailto:${req.email}`} className="text-primary hover:underline">{req.email}</a></TableCell>
                         <TableCell>{req.phone || <span className="text-muted-foreground/60">No provisto</span>}</TableCell>
-                        <TableCell className={cn('max-w-sm whitespace-pre-wrap', !req.isViewed && 'text-foreground/90')}>{req.message}</TableCell>
+                        <TableCell className='max-w-sm whitespace-pre-wrap text-foreground/90'>{req.message}</TableCell>
                       </TableRow>
                     ))}
                   </TableBody>

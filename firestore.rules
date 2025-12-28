@@ -18,14 +18,14 @@ service cloud.firestore {
        * @allow_create
        *   - Any user can submit a new presentation request.
        *   - This is essential for the public-facing contact form.
-       * @allow_list_read_update
-       *   - Only authenticated users can list, read and update the requests.
-       * @deny_delete
-       *   - No client can delete a request.
+       * @allow_list_read
+       *   - Only authenticated users can list and read the requests.
+       * @deny_write
+       *   - No client can update or delete a request.
        */
       allow create: if true;
-      allow list, read, update: if request.auth != null;
-      allow delete: if false;
+      allow list, read: if request.auth != null;
+      allow write: if false;
     }
   }
 }
