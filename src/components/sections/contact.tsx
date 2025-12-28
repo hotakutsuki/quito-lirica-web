@@ -1,4 +1,3 @@
-
 'use client';
 
 import { zodResolver } from "@hookform/resolvers/zod"
@@ -20,6 +19,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import Image from "next/image"
 import { FadeIn } from "@/components/animations/fade-in"
 import { sendContactEmail } from "@/ai/flows/contact-flow";
+import { useFirebase } from "@/firebase";
+import { collection, addDoc, serverTimestamp } from "firebase/firestore";
+import { addDocumentNonBlocking } from "@/firebase/non-blocking-updates";
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -38,6 +40,7 @@ const formSchema = z.object({
 
 export default function ContactSection() {
   const { toast } = useToast();
+  const { firestore } = useFirebase();
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -50,20 +53,38 @@ export default function ContactSection() {
   });
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
-    try {
-      await sendContactEmail(values);
-      toast({
-        title: "¡Solicitud Enviada!",
-        description: "Gracias por tu interés. Nos pondremos en contacto contigo en breve.",
-      });
-      form.reset();
-    } catch (error) {
-      console.error("Error submitting form:", error);
-      toast({
-        variant: "destructive",
-        title: "Algo salió mal",
-        description: "No se pudo enviar tu solicitud. Por favor, inténtalo de nuevo.",
-      });
+    // Non-blocking Genkit flow call for notification
+    sendContactEmail(values).catch(console.error);
+
+    if (firestore) {
+      try {
+        const presentationRequestRef = collection(firestore, "presentationRequests");
+        addDocumentNonBlocking(presentationRequestRef, {
+          ...values,
+          requestDateTime: serverTimestamp(),
+        });
+
+        toast({
+          title: "¡Solicitud Enviada!",
+          description: "Gracias por tu interés. Nos pondremos en contacto contigo en breve.",
+        });
+        form.reset();
+
+      } catch (error) {
+         console.error("Error writing document to Firestore:", error);
+         toast({
+          variant: "destructive",
+          title: "Algo salió mal al guardar",
+          description: "No se pudo guardar tu solicitud en nuestra base de datos. Por favor, inténtalo de nuevo.",
+        });
+      }
+    } else {
+        console.error("Firestore instance is not available");
+        toast({
+          variant: "destructive",
+          title: "Error de configuración",
+          description: "No se puede conectar a la base de datos. Por favor, contacta al soporte.",
+        });
     }
   }
   

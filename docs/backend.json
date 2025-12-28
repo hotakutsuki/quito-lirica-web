@@ -1,68 +1,43 @@
 {
   "entities": {
     "PresentationRequest": {
-      "$schema": "http://json-schema.org/draft-07/schema#",
-      "title": "PresentationRequest",
+      "title": "Presentation Request",
+      "description": "A user's request for a private presentation.",
       "type": "object",
-      "description": "Represents a request from a user to receive a private presentation about opera reservation packages.",
       "properties": {
-        "id": {
-          "type": "string",
-          "description": "Unique identifier for the presentation request."
-        },
         "name": {
           "type": "string",
-          "description": "The name of the user requesting the presentation."
+          "description": "The user's full name."
         },
         "email": {
           "type": "string",
-          "description": "The email address of the user requesting the presentation.",
+          "description": "The user's email address.",
           "format": "email"
         },
         "message": {
           "type": "string",
-          "description": "A message from the user providing additional context or information for the presentation request."
+          "description": "The message or inquiry from the user."
         },
         "requestDateTime": {
           "type": "string",
-          "description": "The date and time when the presentation request was submitted.",
+          "description": "The timestamp when the request was submitted.",
           "format": "date-time"
         }
       },
-      "required": [
-        "id",
-        "name",
-        "email",
-        "message",
-        "requestDateTime"
-      ]
+      "required": ["name", "email", "message", "requestDateTime"]
     }
   },
   "auth": {
     "providers": [
-      "password",
       "anonymous"
     ]
   },
   "firestore": {
-    "structure": [
-      {
-        "path": "/presentationRequests/{presentationRequestId}",
-        "definition": {
-          "entityName": "PresentationRequest",
-          "schema": {
-            "$ref": "#/backend/entities/PresentationRequest"
-          },
-          "description": "Stores presentation requests submitted by users.  No denormalized authorization fields are needed, as access control is based on public read/write.",
-          "params": [
-            {
-              "name": "presentationRequestId",
-              "description": "The unique ID of the presentation request document."
-            }
-          ]
-        }
-      }
-    ],
-    "reasoning": "Given the requirement to store presentation requests, a straightforward collection structure is recommended. A single collection, `presentationRequests`, will house all request documents. This simplifies data management and querying.  \n\nAuthorization Independence: Since there are no hierarchical relationships or nested data, authorization is simple: there's no need to denormalize any data for authorization purposes. All writes are public (no login required). The structure facilitates QAPs since listing presentation requests will have the same security posture for all documents in the collection. This prevents listing documents that should be hidden.\n\nClarity of Intent:  The collection name `presentationRequests` clearly indicates its purpose. Each document within the collection represents a single presentation request, making the structure easy to understand and maintain."
+    "/presentationRequests/{presentationRequestId}": {
+      "schema": {
+        "$ref": "#/entities/PresentationRequest"
+      },
+      "description": "Stores all presentation requests submitted by users through the contact form. This collection acts as a secure dropbox, allowing public writes but denying any client-side reads, updates, or deletes to protect user privacy."
+    }
   }
 }
