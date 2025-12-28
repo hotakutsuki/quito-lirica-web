@@ -7,24 +7,24 @@ service cloud.firestore {
      * Presentation Requests Collection
      *
      * This collection acts as a secure "dropbox". Any user (authenticated or not)
-     * can submit a new presentation request. Once submitted, the data is protected
-     * and cannot be read, updated, or deleted by any client-side request. This
-     * ensures user privacy and data integrity.
+     * can submit a new presentation request.
+     *
+     * Only authenticated users (admins) can read the list of requests. This
+     * ensures user privacy and data integrity, while allowing admin access.
      */
     match /presentationRequests/{presentationRequestId} {
       /**
        * @allow_create
        *   - Any user can submit a new presentation request.
        *   - This is essential for the public-facing contact form.
-       * @deny_read
-       *   - No client can read the list of requests or any single request.
-       *   - Protects the privacy of submitted names, emails, and messages.
+       * @allow_read
+       *   - Only authenticated users can read the list of requests.
        * @deny_update_delete
        *   - No client can modify or delete a request once it's submitted.
-       *   - Ensures data immutability and prevents tampering.
        */
-      allow read, update, delete: if false;
       allow create: if true;
+      allow read: if request.auth != null;
+      allow update, delete: if false;
     }
   }
 }
