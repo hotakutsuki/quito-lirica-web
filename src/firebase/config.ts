@@ -3,6 +3,11 @@
 // Use environment variables to configure Firebase as specified in the documentation.
 // https://firebase.google.com/docs/web/setup#access-firebase-in-your-app
 
+// --- DEBUGGING START ---
+console.log('[DEBUG] src/firebase/config.ts: NEXT_PUBLIC_FIREBASE_API_KEY on client =', process.env.NEXT_PUBLIC_FIREBASE_API_KEY);
+// --- DEBUGGING END ---
+
+
 // This configuration is for reference and may be used in environments
 // where environment variables are not available.
 export const firebaseConfig = {

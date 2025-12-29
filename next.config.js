@@ -28,7 +28,7 @@ const nextConfig = {
         pathname: '/**',
       },
       {
-        protocol: 'https',
+        protocol: 'httpshttps',
         hostname: 'api.qrserver.com',
         port: '',
         pathname: '/**',
@@ -50,5 +50,9 @@ const nextConfig = {
     return config;
   },
 };
+
+// --- DEBUGGING START ---
+console.log('[DEBUG] next.config.js: NEXT_PUBLIC_FIREBASE_API_KEY during build =', process.env.NEXT_PUBLIC_FIREBASE_API_KEY);
+// --- DEBUGGING END ---
 
 module.exports = nextConfig;
