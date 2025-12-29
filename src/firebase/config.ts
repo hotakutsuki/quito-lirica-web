@@ -1,8 +1,14 @@
+
+// IMPORTANT: Do not use this configuration object directly.
+// Use environment variables to configure Firebase as specified in the documentation.
+// https://firebase.google.com/docs/web/setup#access-firebase-in-your-app
+
+// This configuration is for reference and may be used in environments
+// where environment variables are not available.
 export const firebaseConfig = {
-  "projectId": "quito-lirica",
-  "appId": "1:493144957121:web:c97d4b704c0153cbd2f440",
-  "apiKey": "AIzaSyAvyTbN5vOwIZ5IrRNiZjwcTpsGzA0bdFU",
-  "authDomain": "quito-lirica.firebaseapp.com",
-  "measurementId": "",
-  "messagingSenderId": "493144957121"
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
 };
