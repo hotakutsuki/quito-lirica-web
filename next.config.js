@@ -28,7 +28,7 @@ const nextConfig = {
         pathname: '/**',
       },
       {
-        protocol: 'httpshttps',
+        protocol: 'https',
         hostname: 'api.qrserver.com',
         port: '',
         pathname: '/**',
