@@ -25,6 +25,8 @@ runConfig:
       secret: NEXT_PUBLIC_FIREBASE_APP_ID
     - key: NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID
       secret: NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID
+# This section exposes the secrets to the Next.js build process, making them
+# available as client-side environment variables.
 env:
   - variable: NEXT_PUBLIC_FIREBASE_API_KEY
     secret: NEXT_PUBLIC_FIREBASE_API_KEY
