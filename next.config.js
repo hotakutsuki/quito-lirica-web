@@ -51,8 +51,4 @@ const nextConfig = {
   },
 };
 
-// --- DEBUGGING START ---
-console.log('[DEBUG] next.config.js: NEXT_PUBLIC_FIREBASE_API_KEY during build =', process.env.NEXT_PUBLIC_FIREBASE_API_KEY);
-// --- DEBUGGING END ---
-
 module.exports = nextConfig;
